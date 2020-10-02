@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  2 OCT 2020 02:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  2 OCT 2020 02:26
 entering extended mode
 **./diff.tex
 (diff.tex
@@ -1131,51 +1131,55 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Overfull \hbox (39.7055pt too wide) in paragraph at lines 221--250
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 251.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 252.
 
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 251.
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 252.
 
 [1
 
 {C:/Users/Fernando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Defini
 tions/logo-mdpi-eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 390.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 392.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 442--442
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 4
-97.
+99.
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 497.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 499.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 497.
+Package lastpage Warning: Rerun to get the references right on input line 499.
 
 
 AED: lastpage setting LastPage
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 497.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 499.
 
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 499.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 499.
  (diff.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 499.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 499.
 
 
 Package rerunfilecheck Warning: File `diff.out' has changed.
@@ -1195,11 +1199,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  27578 strings out of 492452
  472374 string characters out of 3126551
- 595533 words of memory out of 3000000
+ 580533 words of memory out of 3000000
  31306 multiletter control sequences out of 15000+200000
  60148 words of font info for 193 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,18n,64p,2409b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,18n,64p,2409b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ecss0500.pk>{D:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
@@ -1215,7 +1219,7 @@ grama/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de
 s de programa/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de pr
 ograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/
 MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diff.pdf (3 pages, 702505 bytes).
+Output written on diff.pdf (3 pages, 702164 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
