@@ -7,15 +7,15 @@
 ::mkdir latexdiff
 
 :: REMOVE TMP & DIFF FILES
-::IF EXIST tmp.old.tex (
-::	del tmp.old.tex
-::)
+IF EXIST tmp.old.tex (
+	del tmp.old.tex
+)
 IF EXIST diff.tex (
 	del diff.tex
 )
 
 :: Download previous version
-::git show HEAD~1:"Vehicle Traffic Model.tex" > tmp.old.tex
+git show HEAD~1:"Vehicle Traffic Model.tex" > tmp.old.tex
 :: Set current path
 set PWD="%cd%"
 :: Apply latexdiff

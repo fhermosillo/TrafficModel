@@ -4,6 +4,10 @@
 %=================================================================
 \documentclass[sensors,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
 
+
+
+
+
 \usepackage{amsmath}
 \usepackage[center]{subfigure} %para las subfiguras
 \usepackage{multirow}
@@ -12,6 +16,9 @@
 \newcommand{\mathvec}[1]{\boldsymbol{\mathbf{\MakeLowercase{#1}}}}
 \newcommand{\mathmat}[1]{\boldsymbol{\mathbf{\MakeUppercase{#1}}}}
 \newcommand{\mathten}[1]{\boldsymbol{\mathbf{\mathcal{\MakeUppercase{#1}}}}}
+
+
+
 
 % If you would like to post an early version of this manuscript as a preprint, you may use preprint as the journal and change 'submit' to 'accept'. The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
 
@@ -163,39 +170,41 @@ Content
 \section{Tensor Algebra}
 
 \begin{table}[H]
-	\caption{Tensor Algebra Notation Summary.}
-	\centering
-	%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
-	\begin{tabular}{ll}
-		\midrule
-		$\mathten{X}, \mathmat{X}, \mathvec{x}, x$		& Tensor, matrix, vector scalar.\\
-		$\mathten{X} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$		& A ${I_1 \times \cdots \times I_N}$ tensor.\\
-		$x_{i_1 \cdots i_N}$ & The $({i_1 \cdots i_N})$ entry of an $N^{th}$-order tensor.\\
-		$\mathmat{X}^{(n)}$ & The $n^{th}$ matrix element from a sequence of matrices.\\
-		$\mathmat{X}_{(n)}$ & The n-mode matricization of a tensor.\\
-		$\boldsymbol{\otimes}_{outer}$ & Outer product of two vectors.\\
-		$\boldsymbol{\otimes}_{kron}$ & Kronecker product of two matrices.\\
-		$\bigodot$	& Khatri Rao product of two matrices.\\
-		$\langle \mathten{X}, \mathten{Y} \rangle$ & Inner product of two tensors.\\
-		$\mathten{Y} = \mathten{X} \times_n \mathmat{U}$ & The n-mode product of a tensor $\mathten{X}$ times a matrix $\mathmat{U}$ along the $n$ dimension.\\
-		$[\![\boldsymbol{\lambda}/\mathten{G},\mathmat{U}^{(1)},\cdots,\mathmat{U}^{(N)}]\!]$ & Simplified form of $N^{th}$-order tensor decomposition models as factor matrices.\\
-		$rank_{t}(\mathten{X})$ & Decomposition/CP rank.\\
-		$rank_{tc}(\mathten{X})$ & Multilinear/Tucker rank.\\
-		\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
-		$\mathten{X} * \mathten{Y}$ & t-product of two tensors.\\
-		$\mathten{X} *_{\Phi} \mathten{Y}$ & $\Phi$-product of two tensors.\\
-		\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
-		$\mathcal{H}(\cdot)$/$\mathcal{H}^{-1}(\cdot)$ & Hankelization direct/inverse transformation.\\
-		$\mathcal{L}(\cdot)$/$\mathcal{L}^{-1}(\cdot)$ & L{\"o}wnerization direct/inverse transformation.\\
-		\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
-		$\mathten{V}$ & Video of duration $\tau$, represented as a tensor.\\
-		$\mathten{B}$ & Background tensor.\\
-		$\mathten{F}$ & Foreground tensor.\\
-		$\mathten{Z}$ & Vehicle traffic features tensor.\\
-		\bottomrule
-	\end{tabular}
+\caption{Tensor Algebra Notation Summary.}
+\centering
+%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{ll}
+\midrule
+$\mathten{X}, \mathmat{X}, \mathvec{x}, x$		& Tensor, matrix, vector scalar.\\
+$\mathten{X} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$		& A ${I_1 \times \cdots \times I_N}$ tensor.\\
+$x_{i_1 \cdots i_N}$ & The $({i_1 \cdots i_N})$ entry of an $N^{th}$-order tensor.\\
+$\mathmat{X}^{(n)}$ & The $n^{th}$ matrix element from a sequence of matrices.\\
+$\mathmat{X}_{(n)}$ & The n-mode matricization of a tensor.\\
+$\boldsymbol{\otimes}$ & Outer product of two vectors.\\
+$\boldsymbol{\otimes}_{kron}$ & Kronecker product of two matrices.\\
+$\bigodot$	& Khatri Rao product of two matrices.\\
+$\langle \mathten{X}, \mathten{Y} \rangle$ & Inner product of two tensors.\\
+$\mathten{Y} = \mathten{X} \times_n \mathmat{U}$ & The n-mode product of a tensor $\mathten{X}$ times a matrix $\mathmat{U}$ along the $n$ dimension.\\
+$[\![\boldsymbol{\lambda}/\mathten{G},\mathmat{U}^{(1)},\cdots,\mathmat{U}^{(N)}]\!]$ & Simplified form of $N^{th}$-order tensor decomposition models as factor matrices.\\
+$rank_{D}(\mathten{X})=R$ & Tensor decomposition/CP rank.\\
+$rank_{tc}(\mathten{X})=(R_1,\cdots, R_N)$ & Tensor multilinear/Tucker rank, where $R_n = rank(\mathmat{X}_{(n)})$.\\
+$rank_k(\mathten{X})$ & Tensor Kruskal-rank\\
+\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
+$\mathten{X} * \mathten{Y}$ & t-product of two tensors.\\
+$\mathten{X} *_{\Phi} \mathten{Y}$ & $\Phi$-product of two tensors.\\
+\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
+$\mathcal{H}(\cdot)$/$\mathcal{H}^{-1}(\cdot)$ & Hankelization direct/inverse transformation.\\
+$\mathcal{L}(\cdot)$/$\mathcal{L}^{-1}(\cdot)$ & L{\"o}wnerization direct/inverse transformation.\\
+\textemdash\textemdash	 & \textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\textemdash\\
+$\mathten{V}_\tau$ & Video of duration $\tau$, represented as a tensor.\\
+$\mathten{B}$ & Background tensor.\\
+$\mathten{F}$ & Foreground tensor.\\
+$\mathten{T}$ & Vehicle traffic features tensor.\\
+\bottomrule
+\end{tabular}
 \end{table}
 
+% n-mode product of a tensor $\mathten{X}\in\mathbb{R}^{I_1 \times \cdots \times I_N}$ times a matrix $\mathmat{U} \in \mathbb{R}^{J \times I_n}$ along the n-dimension resulting in a tensor $\mathten{Y} \in \mathbb{R}^{I_1 \times \cdots \times I_{n-1} \times J \times I_{n+1} \times \cdots \times I_N}$.
 
 Content
 \begin{enumerate}[leftmargin=*,labelsep=4.9mm]
