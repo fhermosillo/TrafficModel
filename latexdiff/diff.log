@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  2 OCT 2020 02:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  2 OCT 2020 02:19
 entering extended mode
-**"./Vehicle Traffic Model.tex"
-("Vehicle Traffic Model.tex"
+**./diff.tex
+(diff.tex
 LaTeX2e <2019-10-01>
 (Definitions/mdpi.cls
 Document Class: Definitions/mdpi 09/09/2019 MDPI paper class
@@ -895,56 +895,92 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 \subfig@top=\skip79
 \subfig@bottom=\skip80
 )
-("Vehicle Traffic Model.aux")
-\openout1 = `"Vehicle Traffic Model.aux"'.
+("D:\Archivos de programa\MiKTeX 2.9\tex/latex/ulem\ulem.sty"
+\UL@box=\box48
+\UL@hyphenbox=\box49
+\UL@skip=\skip81
+\UL@hook=\toks55
+\UL@height=\dimen277
+\UL@pe=\count182
+\UL@pixel=\dimen278
+\ULC@box=\box50
+Package: ulem 2019/11/18
+\ULdepth=\dimen279
+)
+("D:\Archivos de programa\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count183
+\lst@gtempboxa=\box51
+\lst@token=\toks56
+\lst@length=\count184
+\lst@currlwidth=\dimen280
+\lst@column=\count185
+\lst@pos=\count186
+\lst@lostspace=\dimen281
+\lst@width=\dimen282
+\lst@newlines=\count187
+\lst@lineno=\count188
+\lst@maxwidth=\dimen283
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 14
-3.
+("D:\Archivos de programa\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count189
+\lst@skipnumbers=\count190
+\lst@framebox=\box52
+)
+("D:\Archivos de programa\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 
+No file diff.aux.
+\openout1 = `diff.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 184.
+LaTeX Font Info:    ... okay on input line 184.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 18
+4.
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 ("D:\Archivos de programa\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count182
-\scratchdimen=\dimen277
-\scratchbox=\box48
-\nofMPsegments=\count183
-\nofMParguments=\count184
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count185
-\MPscratchDim=\dimen278
-\MPnumerator=\count186
-\makeMPintoPDFobject=\count187
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count191
+\scratchdimen=\dimen284
+\scratchbox=\box53
+\nofMPsegments=\count192
+\nofMParguments=\count193
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count194
+\MPscratchDim=\dimen285
+\MPnumerator=\count195
+\makeMPintoPDFobject=\count196
+\everyMPtoPDFconversion=\toks58
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 143.
-LaTeX Info: Redefining \microtypecontext on input line 143.
+(lastpage)             ! on input line 184.
+LaTeX Info: Redefining \microtypecontext on input line 184.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 143.
+LaTeX Info: Redefining \showhyphens on input line 184.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -952,8 +988,8 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring ON on input line 143.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring ON on input line 184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -961,17 +997,15 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 ("D:\Archivos de programa\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count188
+\c@section@level=\count197
 )
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
-("Vehicle Traffic Model.out") ("Vehicle Traffic Model.out")
+LaTeX Info: Redefining \ref on input line 184.
+LaTeX Info: Redefining \pageref on input line 184.
+LaTeX Info: Redefining \nameref on input line 184.
 \@outlinefile=\write4
-\openout4 = `"Vehicle Traffic Model.out"'.
+\openout4 = `diff.out'.
 
 \symAMSb=\mathgroup5
-
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
@@ -1007,8 +1041,10 @@ LaTeX Info: Redefining \nameref on input line 143.
 
 Package newfloat Info: `float' package detected.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count198
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2018-07-22 06:33:52
 (epstopdf)                    size: 736786 bytes
@@ -1018,45 +1054,45 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    size: 557509 bytes
 (epstopdf)             Command: <epstopdf --outfile=Definitions/logo-mdpi-eps-c
 onverted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 143.
+(epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
 
-pdfTeX warning: pdflatex.exe (file ./Definitions/logo-mdpi-eps-converted-to.pdf
-): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Definitions/logo-mdpi-eps-converted-to.pdf, id=42, 88.33pt x 58.2175pt>
+pdfTeX warning: pdflatex (file ./Definitions/logo-mdpi-eps-converted-to.pdf): P
+DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Definitions/logo-mdpi-eps-converted-to.pdf, id=7, 88.33pt x 58.2175pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
 Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on in
-put line 143.
+put line 184.
 (pdftex.def)             Requested size: 43.16885pt x 28.45274pt.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <18> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 143.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 184.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-43.
+84.
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\ot1ppl.fd"
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-143.
+184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omlzplm.fd"
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-143.
+184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omszplm.fd"
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-143.
+184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omxzplm.fd"
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-143.
+184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\ot1zplm.fd"
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -1066,27 +1102,27 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 143.
+(Font)              scaled to size 10.42007pt on input line 184.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/microtype\mt-msb.cfg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 143.
+(Font)              scaled to size 7.91925pt on input line 184.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 143.
+(Font)              scaled to size 6.25204pt on input line 184.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 143.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 184.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 143.
+(Font)              scaled to size 9.37807pt on input line 184.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 143.
+(Font)              scaled to size 7.29405pt on input line 184.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 143.
+(Font)              scaled to size 5.21004pt on input line 184.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 143.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 184.
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-43.
+84.
 
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1095,69 +1131,93 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 239.
+
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 239.
+
+[1
 
 {C:/Users/Fernando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Defini
-tions/logo-mdpi-eps-converted-to.pdf>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 388--388
+tions/logo-mdpi-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 377.
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
 
  []
 
 LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 4
-43.
+84.
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 443.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 484.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 484.
 
 
 AED: lastpage setting LastPage
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 484.
+
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 443.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 443.
- ("Vehicle Traffic Model.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 443.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 443.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 484.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 484.
+ (diff.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 484.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 484.
 
 
-Package rerunfilecheck Warning: File `"Vehicle Traffic Model".out' has changed.
-
+Package rerunfilecheck Warning: File `diff.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `"Vehicle Traffic Model".out':
-(rerunfilecheck)             Before: F1821DD2AD35C56C75D3D5684A5DA2CB;1142
+Package rerunfilecheck Info: Checksums for `diff.out':
+(rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  EE7BE71601CC8E6B5F96212DE3FB8E26;1027.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 26166 strings out of 492452
- 452980 string characters out of 3126551
- 557998 words of memory out of 3000000
- 29905 multiletter control sequences out of 15000+200000
- 58593 words of font info for 190 fonts, out of 3000000 for 9000
+ 27578 strings out of 492452
+ 472374 string characters out of 3126551
+ 594533 words of memory out of 3000000
+ 31306 multiletter control sequences out of 15000+200000
+ 60148 words of font info for 193 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,17n,64p,2428b,432s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section.8} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecss0500.pk>{D:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D
-:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><D
-:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:
-/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/A
-rchivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Ar
-chivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Arch
-ivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archivos
- de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de p
-rograma/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de progr
-ama/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos de p
-rograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de programa
-/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/MiKTeX
- 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "Vehicle Traffic Model.pdf" (3 pages, 700937 bytes).
+ 68i,18n,64p,2409b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecss0500.pk>{D:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
+<D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
+<D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:
+/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/
+Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Ar
+chivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archiv
+os de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de
+ programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de pro
+grama/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de
+ programa/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivo
+s de programa/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de pr
+ograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/
+MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diff.pdf (3 pages, 701992 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 43098 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 133 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 43538 words of extra memory for PDF output out of 51595 (max. 10000000)
 

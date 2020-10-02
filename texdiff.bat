@@ -7,20 +7,20 @@
 ::mkdir latexdiff
 
 :: REMOVE TMP & DIFF FILES
-IF EXIST tmp.old.tex (
-	del tmp.old.tex
-)
+::IF EXIST tmp.old.tex (
+::	del tmp.old.tex
+::)
 IF EXIST diff.tex (
 	del diff.tex
 )
 
 :: Download previous version
-git show HEAD~1:"Vehicle Traffic Model.tex" > tmp.old.tex
+::git show HEAD~1:"Vehicle Traffic Model.tex" > tmp.old.tex
 :: Set current path
 set PWD="%cd%"
 :: Apply latexdiff
 ECHO [-] Finding differences ...
-latexdiff %pwd%/"tmp.old.tex" %pwd%/"Vehicle Traffic Model.tex" > %pwd%/"diff.tex"
+latexdiff %PWD%/"tmp.old.tex" %PWD%/"Vehicle Traffic Model.tex" > %PWD%/"diff.tex"
 echo [92mDONE![0m
 ::PAUSE
 del tmp.old.tex
