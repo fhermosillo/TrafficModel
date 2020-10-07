@@ -177,6 +177,7 @@ Content
 \midrule
 $\mathten{X}, \mathmat{X}, \mathvec{x}, x$		& Tensor, matrix, vector scalar.\\
 $\mathten{X} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$		& A ${I_1 \times \cdots \times I_N}$ tensor.\\
+$ord(\mathten{X})$ & The order of a tensor.\\
 $x_{i_1 \cdots i_N}$ & The $({i_1 \cdots i_N})$ entry of an $N^{th}$-order tensor.\\
 $\mathmat{X}^{(n)}$ & The $n^{th}$ matrix element from a sequence of matrices.\\
 $\mathmat{X}_{(n)}$ & The n-mode matricization of a tensor.\\
@@ -206,10 +207,11 @@ $\mathten{T}$ & Vehicle traffic features tensor.\\
 
 % n-mode product of a tensor $\mathten{X}\in\mathbb{R}^{I_1 \times \cdots \times I_N}$ times a matrix $\mathmat{U} \in \mathbb{R}^{J \times I_n}$ along the n-dimension resulting in a tensor $\mathten{Y} \in \mathbb{R}^{I_1 \times \cdots \times I_{n-1} \times J \times I_{n+1} \times \cdots \times I_N}$.
 
-Content
 \begin{enumerate}[leftmargin=*,labelsep=4.9mm]
 	\item	Notation.
 	\item	Basic tensor concepts.
+	\item 	Operators on tensors.
+	\item 	Tensorization definition and methods.
 	\item	Tensor decompositions (E.G.)
 	\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
 		\item	CANDECOM/PARAFAC Decomposition
@@ -224,23 +226,54 @@ Content
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement and Mathematical Definition}
-Content
-\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
-	\item	Problem Statement.
-	\item	Mathematical Definition.
-\end{enumerate}
+
+Current traffic surveillance systems employ different data models on each stage, so there is no such unified model which allows to capture relationships among all stages. Multidimensional models and their decomposition, have proven to be very powerful for explicitly representing and extracting multidimensional structures in several fields, including signal processing [], machine learning [],  and telecommunications [], to name a few. Unfortunately, despite its high potential in several fields, multidimensional models have not yet been exploited for the vehicle traffic modeling.
+
+
+
+\subsection{Problem Statement}
+Given a traffic surveillance video $\mathten{V}_\tau$ of duration $\tau$, we are looking to formulate a comprehensive and flexible modeling for the moving vehicle traffic supervision based on tensors, that allows us to link all the data models involved during the moving vehicle behavior analysis and their intrinsic correlations in such stages as the detection, counting, tracking, occlusion handling and classification, which also facilitates data manipulation and transformation by using certain mathematical operations, such as multilinear transformations and tensor decompositions.
+%which allows to study the moving vehicle behavior under stages such as detection, counting, tracking, occlusion handling and classification.
+
+\subsection{Mathematical Definition}
+The problem raised above can be understood as a multidimensional modeling of moving vehicles which we called Vehicle Traffic Features (VTF) tensor, in such a way that each data model employed, can be represented as a mode or dimension, i.e., $\mathten{T} \in \mathbb{R}^{Model\:1 \times Model\:2 \times \cdots \times Model\:N}$. From this model, other representations could be also derived by either fixing certain dimensions or applying some multidimensional operators on it, in order to study the behavior of moving vehicles at specific modes.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Vehicle Traffic Model}
-Content
-\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
-	\item	Traffic surveillance video modeling.
-	\item	Representing vehicle traffic data as an n-way tensor.
-	\item	Tensor Factorization for vehicle traffic analysis.
-\end{enumerate}
+Traditional vehicle traffic models treat data as a one-dimensional features vector, to later be used to capture the internal correlation of historical data. However, vehicle traffic data is multi-mode by experiments, e.g., features mode, time mode, vehicle class mode, occlusion mode, among others, therefore, the current models turn out to be inadequate to capture these multidimensional interactions. The proposal of a multidimensional model will preserve the multi-mode nature of data, while the use of tensor methods such as decompositions, will help to better capture correlations among all modes.
+
+\subsection{Traffic Surveillance Video Modeling}
+
+Given a traffic surveillance video modeled as a four-order tensor $\mathten{V}_\tau \in \mathbb{R}^{W\times H \times D \times Time}$ of $W \times H$ resolution and a duration of $\tau$ seconds, where each pixel is mapped in some color-space of dimension $D$, e.g., grayscale, RGB, then, we will assume that there exist some tensor decomposition model such that the following Equation holds (see Figure \ref{fig:tsvmodel}):
+
+\begin{equation}
+\mathten{V}_\tau = \mathten{B} + \mathten{F}
+\label{eq:tsvmodel}
+\end{equation}
+
+where $\mathten{B} \in \mathbb{R}^{W\times H \times D \times Time}$ is a low-rank tensor which capture low-frequency components the video, i.e., the background, while $\mathten{F} \in \mathbb{R}^{W\times H \times D \times Time}$ is a sparse tensor that contains motion information on the video, in other words it represents the foreground. Note that in Figure \ref{fig:tsvmodel} there exist another tensor denoted by $\mathten{F}_m \in \mathbb{R}^{W\times H \times Time}$, which is nothing but a binarized mask of $\mathten{F}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=14 cm]{images/traffic-model.png}
+\caption{Illustration of the traffic surveillance video decomposition model.}
+\label{fig:tsvmodel}
+\end{figure}
+
+For this model, there exist some methods and algorithms that successfully decompose a traffic surveillance video into the background and foreground components such as the Gaussian Mixture Model and Robust Principal Component Analysis (see [X] for review on this decomposition). In this work, we will use a modified version of the Tensor Robust Principal Component Analysis or TRPCA in short, originally proposed by Lu, C., et. al., [X] to achieve such decomposition.
+
+\subsection{Moving Vehicle Traffic Tensor Modeling}
+
+From the foreground tensor $\mathten{F}$, useful information about moving vehicles can be extracted such as geometry, kinematic and color information by analyzing e.g., the connected components or the historical motion data in $\mathten{F}_m$, which could be used at each stage of a traffic surveillance system. However, due to the high volume and the multi-mode nature of the data, a one-mode representation is insufficient to exploit correlations among all modes. 
+
+To tackle the shortcomings of one-mode models, we proposed to arrange and group the moving vehicle data into a high-order tensor $\mathten{T} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$, which we call the Vehicle Traffic Features tensor, where its order $ord(\mathten{T}) = N$ will be equal to the number of data models to be used. Therefore, as long as we desired to include a new data model, the order of the VTF tensor will be increased by one. This makes it possible to have a flexible model in front of new data models.
+
+\subsection{Tensor Factorization of the Vehicle Features Tensor}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

@@ -15,7 +15,7 @@ IF EXIST diff.tex (
 )
 
 :: Download previous version
-git show HEAD~1:"Vehicle Traffic Model.tex" > tmp.old.tex
+git show HEAD:"Vehicle Traffic Model.tex" > tmp.old.tex
 :: Set current path
 set PWD="%cd%"
 :: Apply latexdiff
