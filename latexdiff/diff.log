@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  12 OCT 2020 03:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  12 OCT 2020 18:58
 entering extended mode
 **./diff.tex
 (diff.tex
@@ -1131,228 +1131,131 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (71.61887pt too wide) in paragraph at lines 220--250
- [][] 
- []
-
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 251.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 248.
 
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 251.
+
+LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 248.
 
 [1
 
 {C:/Users/Fernando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Defini
 tions/logo-mdpi-eps-converted-to.pdf>]
-Underfull \hbox (badness 1038) in paragraph at lines 279--283
-\T1/ppl/m/n/10 (+20) a []|   []   |   []   |   []   [][]|   []   |   []   |   [
-]   |   []   []mod-el-ing for the []|   []   |   []
- []
 
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 283.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 280.
 
 [2]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 295.
+LaTeX Warning: Reference `fig:tsvmodel' on page 3 undefined on input line 294.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sout' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 295.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 295.
-
-
-LaTeX Warning: Reference `fig:tsvmodel' on page 3 undefined on input line 300.
-
-
-LaTeX Warning: Reference `fig:tsvmodel' on page 3 undefined on input line 307.
+LaTeX Warning: Reference `fig:tsvmodel' on page 3 undefined on input line 301.
 
 <images/traffic-model.png, id=56, 679.8198pt x 313.17pt>
 File: images/traffic-model.png Graphic file (type png)
 <use images/traffic-model.png>
-Package pdftex.def Info: images/traffic-model.png  used on input line 311.
+Package pdftex.def Info: images/traffic-model.png  used on input line 305.
 (pdftex.def)             Requested size: 398.33858pt x 183.50237pt.
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 317.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 315.
 
 [3 <./images/traffic-model.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 324.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sout' on input line 324.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]   |   []   |   []   |   []
+Underfull \hbox (badness 4120) in paragraph at lines 325--326
+[]\T1/ppl/m/n/10 (+20) Through the VTF ten-sor we can ex-ploit the multi-mode c
+or-re-la-tions, for ex-am-ple,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
-|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
-  |   []   |   []   |   []
- []
+LaTeX Warning: Reference `eq:hankelization' on page 4 undefined on input line 3
+32.
 
 
-Underfull \hbox (badness 4291) in paragraph at lines 328--329
-|   []   |   []   |   []   |   []   |   []
- []
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 335.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 331.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 331.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 335.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 335.
-
-
-Underfull \hbox (badness 5681) in paragraph at lines 337--338
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]   |   []   |   []   |   []
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 339.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 339.
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 341--342
-|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
-  |   []   |   []   |   []   |   []   |   []
- []
-
-
-Underfull \hbox (badness 1092) in paragraph at lines 343--345
-|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
-  |   []   |   []   |   []   |   []   |   []   |   []
- []
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 345.
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{subsection.
-4.3}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.345 
-      ]
+[4]
 
 LaTeX Warning: Reference `eq:hankelization' on page 5 undefined on input line 3
-46.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]   |   []
- []
+44.
 
 
 LaTeX Warning: Reference `eq:loewnerization' on page 5 undefined on input line 
-357.
+347.
+
+
+LaTeX Warning: Reference `eq:loewnerization' on page 5 undefined on input line 
+362.
 
 
 LaTeX Warning: Reference `eq:lowrankmodel' on page 5 undefined on input line 37
-2.
+9.
 
 
-LaTeX Warning: Reference `sec:tensoralg' on page 5 undefined on input line 372.
+LaTeX Warning: Reference `sec:tensoralg' on page 5 undefined on input line 379.
 
 
 
-Underfull \hbox (badness 3088) in paragraph at lines 384--385
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]   |   []
+Underfull \hbox (badness 1769) in paragraph at lines 389--390
+[]\T1/ppl/m/n/10 (+20) EMPLEAMOS LOS MOD-E-LOS SEGUI-DOS DE UN TRUN-CAMIENTO DE
+ LA T-SVD,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-|   []   |   []   |   []   |   []   |   []   |   []
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\T1/ppl/m/n/10 (+20) DESCAR-TANDO AQUE-L-LOS VAL-ORES SIN-GU-LARES MUL-TI-DI-ME
+N-SION-ALES QUE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
-|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
+\T1/ppl/m/n/10 (+20) NO APORTEN SU-FI-CIENTE IN-FOR-MA-CION DE ACUERDO A SU DIS
+-TRIBU-CION.
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 384--385
-|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
-  |   []
+Underfull \hbox (badness 1436) in paragraph at lines 389--390
+\T1/ppl/m/n/10 (+20) ADI-CIONAL-MENTE EL USO DE T-RPCA PARA GENERAR MOD-E-LOS M
+AS RO-BUS-TOS
  []
 
 
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 388.
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 399.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 544--544
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
 
  []
 
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 589.
-
-[6]
-LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 5
-99.
- ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
+LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 6
+02.
+("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 599.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 602.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 599.
+Package lastpage Warning: Rerun to get the references right on input line 602.
 
 
 AED: lastpage setting LastPage
 
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 599.
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 602.
+
+[6]
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 602.
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 599.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 599.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
  (diff.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 599.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 599.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
 
 
 Package rerunfilecheck Warning: File `diff.out' has changed.
@@ -1361,7 +1264,7 @@ Package rerunfilecheck Warning: File `diff.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `diff.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  CB5353AB77445EA4B1E872CF313D3DF6;3200.
+(rerunfilecheck)             After:  4D0B56D5EDAAE6361BA808055EAB63D2;2715.
 
 LaTeX Warning: There were undefined references.
 
@@ -1370,11 +1273,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 27674 strings out of 492452
- 473446 string characters out of 3126551
- 631533 words of memory out of 3000000
- 31327 multiletter control sequences out of 15000+200000
- 69760 words of font info for 240 fonts, out of 3000000 for 9000
+ 27691 strings out of 492452
+ 473590 string characters out of 3126551
+ 586534 words of memory out of 3000000
+ 31326 multiletter control sequences out of 15000+200000
+ 70714 words of font info for 252 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,17n,64p,2409b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
@@ -1393,7 +1296,7 @@ programa/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos
  de programa/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de pro
 grama/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/M
 iKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diff.pdf (7 pages, 1146196 bytes).
+Output written on diff.pdf (7 pages, 1138691 bytes).
 PDF statistics:
  171 PDF objects out of 1000 (max. 8388607)
  42 named destinations out of 1000 (max. 500000)
