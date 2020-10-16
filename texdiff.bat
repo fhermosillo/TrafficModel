@@ -6,21 +6,30 @@
 ::)
 ::mkdir latexdiff
 
+:: Set current path
+set PWD=%1%
+ECHO Current folder is "%PWD%"
+cd %PWD%
+
 :: REMOVE TMP & DIFF FILES
 IF EXIST tmp.old.tex (
+	ECHO File tmp.old.tex was removed
 	del tmp.old.tex
 )
 IF EXIST diff.tex (
+	ECHO File diff.tex was removed
 	del diff.tex
 )
 
 :: Download previous version
 git show HEAD:"Vehicle Traffic Model.tex" > tmp.old.tex
-:: Set current path
-set PWD="%cd%"
+
 :: Apply latexdiff
 ECHO [-] Finding differences ...
 latexdiff %PWD%/"tmp.old.tex" %PWD%/"Vehicle Traffic Model.tex" > %PWD%/"diff.tex"
 echo [92mDONE![0m
 ::PAUSE
 del tmp.old.tex
+
+:: Apply pdflatex command
+pdflatex diff.tex

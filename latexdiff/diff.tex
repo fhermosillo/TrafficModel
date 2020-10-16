@@ -1,7 +1,7 @@
 %  LaTeX support: latex@mdpi.com 
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL D:\CINVESTAV\Doctorado\Cuatrimestre\7\Dr Deni\TrafficModel/tmp.old.tex                 Mon Oct 12 18:58:13 2020
-%DIF ADD D:\CINVESTAV\Doctorado\Cuatrimestre\7\Dr Deni\TrafficModel/Vehicle Traffic Model.tex   Mon Oct 12 18:55:05 2020
+%DIF DEL D:/CINVESTAV/Doctorado/Cuatrimestre/7/Dr Deni/TrafficModel/tmp.old.tex                 Fri Oct 16 12:19:28 2020
+%DIF ADD D:/CINVESTAV/Doctorado/Cuatrimestre/7/Dr Deni/TrafficModel/Vehicle Traffic Model.tex   Fri Oct 16 11:46:32 2020
 %  In case you need support, please attach all files that are necessary for compiling as well as the log file, and specify the details of your LaTeX setup (which operating system and LaTeX version / tools you are using).
 
 %=================================================================
@@ -241,7 +241,7 @@ $\mathcal{L}(\cdot)$/$\mathcal{L}^{-1}(\cdot)$ & L{\"o}wnerization direct/invers
 $\mathten{V}_\tau$ & Video of duration $\tau$, represented as a tensor.\\
 $\mathten{B}$ & Background tensor.\\
 $\mathten{F}$ & Foreground tensor.\\
-$\mathten{T}$ & Vehicle traffic features tensor.\\
+\DIFdelbeginFL \DIFdelFL{$\mathten{T}$ }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\mathten{T}^{(N)}$ }\DIFaddendFL & Vehicle traffic \DIFdelbeginFL \DIFdelFL{features tensor }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{feature tensor with $N$ embedded models}\DIFaddendFL .\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -273,12 +273,12 @@ Current traffic surveillance systems employ different data models on each stage,
 
 
 \subsection{Problem Statement}
-Given a traffic surveillance video $\mathten{V}_\tau$ of duration $\tau$, we seek to formulate a complete and flexible tensor modeling for the supervision of moving vehicles traffic, which allows us to link various data models involved during the analysis of the moving vehicle behavior and its intrinsic \DIFdelbegin \DIFdel{correlations }\DIFdelend \DIFaddbegin \DIFadd{relations }\DIFaddend in stages such as: detection, counting, tracking, occlusion management and classification; speed up or facilitate data transformation by using certain mathematical operations of tensor algebra.
+Given a traffic surveillance video $\mathten{V}_\tau$ of duration $\tau$, we seek to formulate a complete and flexible tensor modeling for the supervision of moving vehicles traffic, which allows us to link various data models involved during the analysis of the moving vehicle behavior and its intrinsic \DIFdelbegin \DIFdel{relations in }\DIFdelend \DIFaddbegin \DIFadd{interactions among multiple }\DIFaddend stages such as: detection, counting, tracking, occlusion management and classification; speed up or facilitate data transformation by using certain mathematical operations of tensor algebra.
 
 
 
 \subsection{Mathematical Definition}
-The problem raised above can be understood as a multidimensional modeling of moving vehicles which we called Vehicle Traffic Feature (VTF) tensor, in such a way that each data model employed, can be represented as a mode or dimension, i.e., $\mathten{T} \in \mathbb{R}^{Model\:1 \times Model\:2 \times \cdots \times Model\:N}$. From this model, other representations could be also derived by either fixing certain dimensions or applying some multidimensional operators on it, in order to study the behavior of moving vehicles at specific modes.
+The problem raised above can be understood as a multidimensional modeling of moving vehicles which we called Vehicle Traffic Feature (VTF) tensor \DIFaddbegin \DIFadd{model}\DIFaddend , in such a way that each data model employed, can be represented as a mode or dimension, i.e., $\mathten{T} \in \mathbb{R}^{Model\:1 \times Model\:2 \times \cdots \times Model\:N}$. From this model, other representations could be also derived by either fixing certain dimensions or applying some multidimensional operators on it, in order to study the behavior of moving vehicles at specific modes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -291,7 +291,7 @@ Traditional vehicle traffic models treat data as a one-dimensional features vect
 
 \subsection{Traffic Surveillance Video Modeling}
 
-Given a traffic surveillance video modeled as a four-order tensor $\mathten{V}_\tau \in \mathbb{R}^{W\times H \times D \times Time}$ of $W \times H$ resolution and a duration of $\tau$ seconds, where each pixel is mapped in some color-space of dimension $D$, e.g., grayscale, RGB, then, we will assume that there exist some tensor decomposition model such that the following Equation holds (see Figure \ref{fig:tsvmodel}):
+Given a traffic surveillance video modeled as a four-order tensor $\mathten{V}_\tau \in \mathbb{R}^{W\times H \times D \times Time}$ of $W \times H$ resolution and a duration of $\tau$ seconds, \DIFaddbegin \DIFadd{and }\DIFaddend where each pixel is mapped in some color-space of dimension $D$, e.g., grayscale, RGB, then, we will assume that there exist some tensor decomposition model such that the following Equation holds (see Figure \ref{fig:tsvmodel}):
 
 \begin{equation}
 \mathten{V}_\tau = \mathten{B} + \mathten{F}
@@ -307,88 +307,167 @@ where $\mathten{B} \in \mathbb{R}^{W\times H \times D \times Time}$ is a low-ran
 \label{fig:tsvmodel}
 \end{figure}
 
-For this model, there exist some methods and algorithms that successfully decompose a traffic surveillance video into the background and foreground components such as the Gaussian Mixture Model and Robust Principal Component Analysis (see [X] for review on this decomposition). In this work, we will use a modified version of the Tensor Robust Principal Component Analysis or TRPCA in short, originally proposed by Lu, C., et. al., [X] to achieve such decomposition.
+For this model, there exist some methods and algorithms that successfully decompose a traffic surveillance video into the background and foreground components such as the Gaussian Mixture Model and Robust Principal Component Analysis (see [X] for \DIFaddbegin \DIFadd{an extensive }\DIFaddend review on this decomposition). In this work, we will use a modified version of the Tensor Robust Principal Component Analysis or \DIFdelbegin \DIFdel{TRPCA }\DIFdelend \DIFaddbegin \DIFadd{t-RPCA }\DIFaddend in short, originally proposed by Lu, C., et. al., [X] to achieve such decomposition.
 
 \subsection{Moving Vehicle Traffic Tensor Modeling}
 
-From the foreground tensor $\mathten{F}$, information about moving vehicles can be extracted such as their trajectory, geometry, kinematic and color information by analyzing e.g., the connected components or the historical motion data in $\mathten{F}_m$, which can be used later at a particular stage on a traffic surveillance system. However, due to the high volume and the multi-mode nature of the data, a one-mode representation results to be not enough to exploit relations among all modes. 
+From the foreground tensor $\mathten{F}$, information about moving vehicles can be extracted such as their trajectory, geometry, kinematic \DIFdelbegin \DIFdel{and color informationby analyzing e.g., the connected components or the historical motion data in $\mathten{F}_m$}\DIFdelend \DIFaddbegin \DIFadd{or color information}\DIFaddend , which can be used later at a particular stage \DIFdelbegin \DIFdel{on a traffic surveillance }\DIFdelend \DIFaddbegin \DIFadd{of a VTS }\DIFaddend system. However, due to the \DIFdelbegin \DIFdel{high volume and the multi-mode nature of the data }\DIFdelend \DIFaddbegin \DIFadd{high-volume of data and multimodality induced by multi-stage VTS systems}\DIFaddend , a one-mode representation results to be not enough to exploit \DIFdelbegin \DIFdel{relations among all modes}\DIFdelend \DIFaddbegin \DIFadd{interactions among stages}\DIFaddend .
 
-To tackle the shortcomings of one-mode models, we proposed to arrange and group the moving vehicle data into a high-order tensor $\mathten{T} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$, which will be called here Vehicle Traffic Feature tensor, where its order $ord(\mathten{T}) = N$ will be equal to the number of data models to be used. Therefore, whenever we want to include a new data model, the order of the VTF tensor will increase by one. This makes it possible to have a flexible model in the face of new data models. 
+To tackle the shortcomings of one-mode models, we proposed to arrange and group \DIFdelbegin \DIFdel{the moving vehicle data into }\DIFdelend \DIFaddbegin \DIFadd{vehicle information as }\DIFaddend a high-order \DIFdelbegin \DIFdel{tensor $\mathten{T} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$, which will be called here }\DIFdelend \DIFaddbegin \DIFadd{structure $\mathten{T}^{(N)} \in \mathbb{R}^{I_1 \times \cdots \times I_N}$ called }\DIFaddend Vehicle Traffic Feature \DIFdelbegin \DIFdel{tensor, where its order $ord(\mathten{T}) = N$ will be equal to the number of data models to be used. Therefore, whenever we want to include a new data model, the order of the VTF tensor will increase by one.
+This makes it possible to have a flexible model in the face of new data models. 
+}\DIFdelend \DIFaddbegin \DIFadd{(VTF) tensor to model the vehicle behavior of a feature model over multiple stages. Even though there is a vast set of features which can be extracted from $\mathten{F}$, here we will focus on the geometric feature model, for which we will assume that the behavior of any feature over time can be described by polynomial functions.
+}\DIFaddend 
 
-Unless otherwise stated, in the following sections we will refer to the VTF tensor as the five-order tensor \DIFdelbegin \DIFdel{which consists of }\DIFdelend \DIFaddbegin \DIFadd{with }\DIFaddend the following dimensions: $Vehicles \times Geometric\,Features \times Time \times Classification \times Occlusion$. QUIZA ESTO MEJOR EN LOS EXPERIMENTOS.
+
+\DIFdelbegin \DIFdel{Unless otherwise stated, in the following sections we will refer to the VTF tensor as the five-order tensor with the following dimensions: $Vehicles \times Geometric\,Features \times Time \times Classification \times Occlusion$.
+QUIZA ESTO MEJOR EN LOS EXPERIMENTOS.
+}\DIFdelend %DIF > , where the superscript $(N)$ denotes the number of data models embedded on it, in other words its order $N=ord(\mathten{T}^{(N)})$. Therefore, whenever we want to include a new data model, the order of the VTF tensor will increase by one. This will enable us to have a flexible model in the face of new data models.
+
+\DIFdelbegin \subsection{\DIFdel{Factorization of the Vehicle Traffic Feature Tensor}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdel{Although we can extract a bunch set of multidimensional information to our VFT tensor in different ways, we will focus our attention on two fundamental problems: the pattern recognition and the use of multilinear transformations to enforce low-rank assumptions on tensor models. We start by analyzing the pattern recognition followed by multilinear transformations.}\DIFdelend %DIF > In order to construct $\mathten{T}^{(N)}$, during a certain amount of time and for each detected vehicle on the road, we will record a set of geometric features modeled as vectors in $\mathbb{R}^n$, such as area, while assuming that within the observation time, $M$ vehicles will be detected and tracked. Based on these principles, we arrange the recorded data associated to the $i$th vehicle into a matrix $\mathmat{T}_i \in \mathbb{R}^{Geometric\,Features \times Time}$, such that each $\mathmat{T}_i$ will be stacked to form a new tensor $\mathten{T}^{(3)} \in \mathbb{R}^{Vehicle \times Geometric\,Features \times Time}$ or the third-order VTF tensor which will model the behavior of the vehicle geometric features over time.
+
+\DIFdelbegin \subsubsection{\DIFdel{Pattern Recognition}}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+\DIFdel{Through the VTF tensor we can exploit the multi-mode correlations, for example, classification-mode, occlusion-mode, and temporal-mode, by Tensor Decompositions (TD), which provide a powerful analytical tool for dealing with multidimensional statics. Common TD employed include the CP-decomposition, Tucker model, HoSVD, and an SVD-based on the t-product called t-SVD, where the choice of a particular decomposition must be application dependent.The CP model is generally used for latent factor extraction, while the Tucker model to uncover hidden pattern in data.On the other hand, the choice of the t-SVD is more suitable when dealing with oriented-tensors}\DIFdelend \DIFaddbegin \DIFadd{In order to construct $\mathten{T}^{(N)}$, for each detected vehicle on the road, we will record a set of geometric features modeled as vectors in $\mathbb{R}^n$ during a certain amount of time, while assuming that within the observation time, $M$ vehicles will be detected and tracked. Based on these principles, we arrange the historical data of the $i$th vehicle into a matrix $\mathmat{T}_i \in \mathbb{R}^{F \times t}$, where $F$ denotes the number of features, and $t$ the time. Then, each $\mathmat{T}_i$ will be stacked along the third-dimension, such that the VTF tensor $\mathten{T}^{(3)}$ of Equation \ref{eq:vtf3model} will be formed to model the temporal behavior of the vehicles geometric features.
+%DIF > Timestamp
+}
+
+\begin{equation}
+\DIFadd{\mathten{T}^{(3)} \in \mathbb{R}^{Vehicle \times Geometric\,Features \times Time}
+\label{eq:vtf3model}
+}\end{equation}
+
+\DIFadd{Following the above ideas, additional modes can also be added for a more generalized modeling of the vehicle geometric features. Specifically, in addition to the three modes of vehicles, geometric features and time, we also include the classification and occlusion modes using the VTF tensor model $\mathten{T}^{(5)}$ as Equation \ref{eq:vtf5model} shows to extend our analysis to multiple stages. In this setting, the classification mode will categorize vehicles according to their sizes (e.g., small, midsize, and large), while the occlusion mode, the type of occlusion }[] \DIFadd{(e.g., non-occluded, lateral, and queue occlusions)}\DIFaddend .
+
+\DIFaddbegin \begin{equation}
+\DIFadd{\mathten{T}^{(5)} \in \mathbb{R}^{Vehicles \times Geometric\,Features \times Time \times Classification \times Occlusion}
+\label{eq:vtf5model}
+}\end{equation}
+
+\DIFaddend \subsubsection{\DIFdelbegin \DIFdel{Low-rankness by }\DIFdelend Multilinear Transformations \DIFaddbegin \DIFadd{over the Vehicle Traffic Feature Tensor}\DIFaddend }
+For \DIFdelbegin \DIFdel{pattern learning in data, tensor decompositions }\DIFdelend \DIFaddbegin \DIFadd{any problem which involves the use of tensor structures, TD }\DIFaddend allow us to  exploit the \DIFdelbegin \DIFdel{high-dimensional structure of the input space}\DIFdelend \DIFaddbegin \DIFadd{intrinsic high-order structure of data}\DIFaddend , therefore, choosing an appropriate representation of data is a key component to improve \DIFdelbegin \DIFdel{pattern recognition}\DIFdelend \DIFaddbegin \DIFadd{any decomposition model}\DIFaddend . Multilinear transformations\DIFaddbegin \DIFadd{, which }\DIFaddend aim to express a multidimensional \DIFaddbegin \DIFadd{vector }\DIFaddend space $V_1 \times \cdots \times V_n$ as their multilinear combination by applying some mapping function \DIFdelbegin \DIFdel{, i.e., }\DIFdelend \DIFaddbegin \DIFadd{of several variables }\DIFaddend $f : V_1 \times \cdots \times V_n \rightarrow W$ \DIFdelbegin \DIFdel{, where $V_i$ and $W$ are vector spaces. It allows to find several representations of data that will }\DIFdelend \DIFaddbegin \DIFadd{that is linear separately in each variable, allow to find new data representations that could }\DIFaddend be more suitable for a particular \DIFdelbegin \DIFdel{tensor decomposition model}\DIFdelend \DIFaddbegin \DIFadd{TD}\DIFaddend .
 
 
-\subsection{Factorization of the Vehicle Traffic Feature Tensor}
-Although we can extract a bunch set of multidimensional information to our VFT tensor in different ways, we will focus our attention on two fundamental problems: the pattern recognition and the use of multilinear transformations to enforce low-rank assumptions on tensor models. We start by analyzing the pattern recognition followed by multilinear transformations.
+\DIFdelbegin \DIFdel{As for }\DIFdelend \DIFaddbegin \DIFadd{Similar to }\DIFaddend linear transformations, \DIFdelbegin \DIFdel{a multilinear transformation provides different properties than }\DIFdelend \DIFaddbegin \DIFadd{multilinear transformations also provide us different properties or structures }[] \DIFadd{that }\DIFaddend can be exploited according to the problem faced, hence the use of a \DIFdelbegin \DIFdel{certain transformation will be also }\DIFdelend \DIFaddbegin \DIFadd{particular transformation must be }\DIFaddend application dependent. Here, we will seek for those \DIFdelbegin \DIFdel{multilinear }\DIFdelend functions which provide a higher-order representation of data while \DIFdelbegin \DIFdel{preserving intrinsic low-rank structures. These properties }\DIFdelend \DIFaddbegin \DIFadd{inducing well-known intrinsic structures. The first desired property }\DIFaddend will be needed for both preserving linear mixtures of the \DIFdelbegin \DIFdel{input }\DIFdelend \DIFaddbegin \DIFadd{source }\DIFaddend space and avoiding \DIFaddbegin \DIFadd{to introduce }\DIFaddend non-separable terms \DIFdelbegin \DIFdel{to }\DIFdelend \DIFaddbegin []\DIFadd{, while the second property allows to enjoy useful properties to }\DIFaddend be exploited in \DIFdelbegin \DIFdel{tensors decomposition}\DIFdelend \DIFaddbegin \DIFadd{TD}\DIFaddend . For that purpose, we \DIFdelbegin \DIFdel{employ two }\DIFdelend \DIFaddbegin \DIFadd{employed two deterministic }\DIFaddend multilinear transformations called Hankelization and L{\"o}wnerization [], which map the \DIFdelbegin \DIFdel{input space to }\DIFdelend \DIFaddbegin \DIFadd{source space into a }\DIFaddend higher-order \DIFdelbegin \DIFdel{representations that approximately have }\DIFdelend \DIFaddbegin \DIFadd{structure that have approximately a intrinsic }\DIFaddend low multilinear-rank\DIFdelbegin \DIFdel{, where }\DIFdelend \DIFaddbegin \DIFadd{. On the other hand, these transformations enjoy some useful properties for data modeling, for example, }\DIFaddend Hankel structures are known \DIFdelbegin \DIFdel{to represent exponential polynomials }\DIFdelend \DIFaddbegin \DIFadd{for representing exponential polynomials }[]\DIFaddend , while L{\"o}wner structures show a very close relationship with rational functions \DIFaddbegin []\DIFaddend , so that they can be used to model and approximate a \DIFaddbegin \DIFadd{wide }\DIFaddend variety of functions\DIFdelbegin \DIFdel{such as sinusoidals}\DIFdelend .
 
-\subsubsection{Pattern Recognition}
-Through the VTF tensor we can exploit the multi-mode correlations, for example, classification-mode, occlusion-mode, and temporal-mode, by Tensor Decompositions (TD), which provide a powerful analytical tool for dealing with multidimensional statics. Common TD employed include the CP-decomposition, Tucker model, HoSVD, and an SVD-based on the t-product called t-SVD, where the choice of a particular decomposition must be application dependent. The CP model is generally used for latent factor extraction, while the Tucker model to uncover hidden pattern in data. On the other hand, the choice of the t-SVD is more suitable when dealing with oriented-tensors.
+The $K$th-order Hankelization is a transformation that maps a vector \DIFdelbegin \DIFdel{$\mathvec{x}\in\mathbb{K}^N$ }\DIFdelend \DIFaddbegin \DIFadd{$\mathvec{x}\in\mathbb{R}^N$ }\DIFaddend into a $K$-order tensor \DIFdelbegin \DIFdel{$\mathten{H}^{(K)} \in\mathbb{K}^{I_1 \times \cdots \times I_K}$ }\DIFdelend \DIFaddbegin \DIFadd{$\mathten{H}^{(K)} \in\mathbb{R}^{I_1 \times \cdots \times I_K}$ }\DIFaddend called Hankel tensor \DIFdelbegin \DIFdel{which contain }\DIFdelend \DIFaddbegin \DIFadd{with constant }\DIFaddend anti-diagonal \DIFdelbegin \DIFdel{hyperplanes with constant entries defined by Equation \ref{eq:hankelization} }\DIFdelend \DIFaddbegin \DIFadd{hyperplanes as Equation \ref{eq:hankelization} shows}\DIFaddend , where $\mathcal{H}$ represents the Hankelization transformation, and $N = I_1 + \cdots + I_K - K + 1$.  On the other hand, the $K$th-order L{\"o}wnerization is a transformation that maps a \DIFdelbegin \DIFdel{vector $\mathvec{x}\in\mathbb{K}^N$ }\DIFdelend \DIFaddbegin \DIFadd{vectorized function $\mathvec{f}\in\mathbb{R}^N$ evaluated at $N$ points $\boldsymbol{\phi}\in\mathbb{R}^{N}$ }\DIFaddend into a $K$-order tensor \DIFdelbegin \DIFdel{$\mathten{L}\in\mathbb{K}^{I_1 \times \cdots \times I_K}$ }\DIFdelend \DIFaddbegin \DIFadd{$\mathten{L}^{(K)} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ }\DIFaddend called L{\"o}wner tensor such that each entry is defined as Equation \ref{eq:loewnerization} shows, where \DIFdelbegin \DIFdel{$\phi_{i_k}^{(k)}$ represents ASASASAS, while $f_{i_p}^{(p)}$ BLABLABLA.
+The above ideas can also be extended to higher-order tensors in a straightforward way. }\DIFdelend \DIFaddbegin \DIFadd{$\mathcal{L}$ represents the $K$th-order L}{\DIFadd{\"o}}\DIFadd{wnerization transformation, while $\mathvec{f}^{(p)}$ is the $p$th subset of $\boldsymbol{\phi}$, which holds that  $\mathvec{f}^{(p)} \bigcap \mathvec{f}^{(q)} = \boldsymbol{\emptyset}$ and $\boldsymbol{\phi}=\bigcup_{k=1}^{K} {\mathvec{f}^{(k)}}$.
+}\DIFaddend 
 
-\subsubsection{Low-rankness by Multilinear Transformations}
-For pattern learning in data, tensor decompositions allow us to  exploit the high-dimensional structure of the input space, therefore, choosing an appropriate representation of data is a key component to improve pattern recognition. Multilinear transformations aim to express a multidimensional space $V_1 \times \cdots \times V_n$ as their multilinear combination by applying some mapping function, i.e., $f : V_1 \times \cdots \times V_n \rightarrow W$, where $V_i$ and $W$ are vector spaces. It allows to find several representations of data that will be more suitable for a particular tensor decomposition model.
-
-As for linear transformations, a multilinear transformation provides different properties than can be exploited according to the problem faced, hence the use of a certain transformation will be also application dependent. Here, we will seek for those multilinear functions which provide a higher-order representation of data while preserving intrinsic low-rank structures. These properties will be needed for both preserving linear mixtures of the input space and avoiding non-separable terms to be exploited in tensors decomposition. For that purpose, we employ two multilinear transformations called Hankelization and L{\"o}wnerization [], which map the input space to higher-order representations that approximately have low multilinear-rank\DIFaddbegin \DIFadd{, where Hankel structures are known to represent exponential polynomials, while L}{\DIFadd{\"o}}\DIFadd{wner structures show a very close relationship with rational functions, so that they can be used to model and approximate a variety of functions such as sinusoidals}\DIFaddend .
-
-\DIFdelbegin \DIFdel{In the simplest case, the }\DIFdelend \DIFaddbegin \DIFadd{The }\DIFaddend $K$th-order Hankelization is a transformation that maps a vector $\mathvec{x}\in\mathbb{K}^N$ into a $K$-order tensor \DIFdelbegin \DIFdel{$\mathten{H}\in\mathbb{K}^{I_1 \times \cdots \times I_K}$ }\DIFdelend \DIFaddbegin \DIFadd{$\mathten{H}^{(K)} \in\mathbb{K}^{I_1 \times \cdots \times I_K}$ }\DIFaddend called Hankel tensor which contain anti-diagonal hyperplanes with constant entries defined by \DIFdelbegin \DIFdel{$h_{i_1,\cdots,i_K} = x_{i_1 + \cdots + i_K - K + 1}$ (see Equation \ref{eq:hankelization}). Hankel matrices }%DIFDELCMD < [] %%%
-\DIFdel{are known to represents exponential polynomials, therefore, they can be used to model and approximate a variety of shapes such as sinusoids.
-}%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\begin{displaymath}
-\DIFdel{\mathten{H} = \mathcal{H}(\mathvec{x}) \equiv \sum{x_{i_1 + \cdots + i_K - K + 1}*\mathten{I}}_{i=1}^{N}
+\DIFdelbegin \begin{displaymath}
+\DIFdel{\mathten{H}^{(K)} = \mathcal{H}(\mathvec{x}) : \mathten{H}^{(K)}_{:,:,i_3,\cdots,i_K} = \mathcal{H}(\mathten{H}^{(K-1)}_{:,i_3,\cdots,i_K}), \, h^{(K)}_{i_1,\cdots,i_K} = x_{i_1 + \cdots + i_K - K + 1}
 %DIFDELCMD < \label{eq:hankelization}%%%
 }\end{displaymath}%DIFAUXCMD
-%DIFDELCMD < 
+\DIFdelend \DIFaddbegin \begin{equation}
+\DIFadd{\mathten{H}^{(K)} = \mathcal{H}(\mathvec{x}) :  h^{(K)}_{i_1,\cdots,i_K} = x_{i_1 + \cdots + i_K - K + 1} %DIF >  \mathten{H}^{(K)}_{:,:,i_3,\cdots,i_K} = \mathcal{H}(\mathten{H}^{(K-1)}_{:,i_3,\cdots,i_K}), \,
+\label{eq:hankelization}
+}\end{equation}\DIFaddend 
 
-%DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{Equation \ref{eq:hankelization}, }\DIFaddend where $\mathcal{H}$ represents the Hankelization transformation, \DIFdelbegin \DIFdel{$\mathten{I}$ a F-diagonal tensor, }\DIFdelend \DIFaddbegin \DIFadd{and }\DIFaddend $N = I_1 + \cdots + I_K - K + 1$.  \DIFdelbegin %DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend On the other hand, the $K$th-order L{\"o}wnerization is a transformation that maps a vector $\mathvec{x}\in\mathbb{K}^N$ into a $K$-order tensor $\mathten{L}\in\mathbb{K}^{I_1 \times \cdots \times I_K}$ called L{\"o}wner tensor \DIFdelbegin \DIFdel{with entries defined by Equation \ref{eq:loewnerization} . L}%DIFDELCMD < {%%%
-\DIFdel{\"o}%DIFDELCMD < }%%%
-\DIFdel{wner matrices }%DIFDELCMD < [%%%
-\DIFdel{148}%DIFDELCMD < ] %%%
-\DIFdel{are known due to their relationship with rational functions, so that they can also be used to model functions that can be written as rational polynomials.
-}%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\begin{displaymath}
+\DIFdelbegin \begin{displaymath}
 \DIFdel{\mathten{L} = \mathcal{L}(\mathvec{x}) : \ell_{i_1,\cdots,i_K} = \sum_{k=1}^{K}{\frac{x_{\phi_{i_k}}^{(k)}}{\prod_{m=1,m\neq k}^{K}{(f_{i_k}^{(k)}-f_{i_m}^{(m)})}}}
 %DIFDELCMD < \label{eq:loewnerization}%%%
 }\end{displaymath}%DIFAUXCMD
-%DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend \DIFaddbegin \DIFadd{such that each entry is defined as Equation \ref{eq:loewnerization} shows, }\DIFaddend where $\phi_{i_k}^{(k)}$ represents ASASASAS, while $f_{i_p}^{(p)}$ BLABLABLA. \DIFdelbegin %DIFDELCMD < 
-
-%DIFDELCMD < %%%
-\DIFdelend The above ideas can also be extended to higher-order tensors in a straightforward way.
-\DIFaddbegin 
-
-\begin{equation}
-\DIFadd{\mathten{H}^{(K)} = \mathcal{H}(\mathvec{x}) : \mathten{H}^{(K)}_{:,:,i_3,\cdots,i_K} = \mathcal{H}(\mathten{H}^{(K-1)}_{:,i_3,\cdots,i_K}), \, h^{(K)}_{i_1,\cdots,i_K} = x_{i_1 + \cdots + i_K - K + 1}
-\label{eq:hankelization}
-}\end{equation}
-
-\begin{equation}
-\DIFadd{\mathten{L} = \mathcal{L}(\mathvec{x}) : \ell_{i_1,\cdots,i_K} = \sum_{k=1}^{K}{\frac{x_{\phi_{i_k}}^{(k)}}{\prod_{m=1,m\neq k}^{K}{(f_{i_k}^{(k)}-f_{i_m}^{(m)})}}}
+\DIFdelend \DIFaddbegin \begin{equation}
+\DIFadd{\mathten{L}^{(K)} = \mathcal{L}(\mathvec{x}) : \ell_{i_1,\cdots,i_K} = \sum_{k=1}^{K}{ \frac{x_{\phi_{k}^{(k)}}}{\prod_{m=1,m\neq k}^{K}{(f_{k}^{(k)} - f_m^{(m)})}}}
 \label{eq:loewnerization}
-}\end{equation}
-\DIFaddend 
+}\end{equation}\DIFaddend 
 
-A common model used in many problems is the (multidimensional) low-rank signal model (see Equation \ref{eq:lowrankmodel}), which states that any observable tensor $\mathten{X}\in\mathbb{K}^{I_1\times \cdots I_N}$ can be (approximately) decomposed as the sum of two components, a low-rank tensor $\mathten{L}\in\mathbb{K}^{I_1\times \cdots I_N}$, and a small dense noise tensor $\mathten{N}\in\mathbb{K}^{I_1\times \cdots I_N}$. Although this decomposition can be solved by several tensor models, such as Tucker, CP, t-SVD or t-RPCA decompositions (see Section \ref{sec:tensoralg}), we only analyze  the t-SVD and t-RPCA.
+\DIFaddbegin \DIFadd{An example of the second-order Hankelization and  L}{\DIFadd{\"o}}\DIFadd{wnerization transformations are shown in Equations \ref{eq:hankelsample} and \ref{eq:loewnersample} respectively. In Equation \ref{eq:loewnersample}, it is assumed that the set of evaluation points is $\mathvec{t}=\{1,\:\:2,\:\:3,\:\:4\}$ which is partitioned into the two disjoint subsets $\mathvec{f}_1=\{1,\:\:3\}$ and $\mathvec{f}_2=\{2,\:\:4\}$.
+}
 
 \begin{equation}
-\mathten{X}= \mathten{L} + \mathten{N}
+	\DIFadd{\mathten{H}^{(2)} = \mathcal{H}\left(
+	\begin{bmatrix}
+		7 & 6 & 15 & 12
+	\end{bmatrix}
+	\right) =
+	\begin{bmatrix}
+	7 & 6 & 15 \\
+	6 & 15 & 12
+	\end{bmatrix}
+	\label{eq:hankelsample}
+}\end{equation}
+
+\begin{equation}
+	\DIFadd{\mathten{L}^{(2)} = \mathcal{L}\left(
+	\begin{bmatrix}
+	7 & 6 & 15 & 12
+	\end{bmatrix}
+	\right) = 
+	\begin{bmatrix}
+	\frac{7-6}{1-2} &  \frac{7-12}{1-4} \\
+	\\
+	 \frac{15-6}{3-2} & \frac{15-12}{3-4}
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	-1.0000 &  1.6667 \\
+	9.0000 & -3.0000
+	\end{bmatrix}	
+	\label{eq:loewnersample}
+}\end{equation}
+
+\DIFadd{While the use of these transformations appear to be beneficial to exploit low-rank models in TD, an increase in the volume of the ambient space is inevitable due to the introduced redundancy. To alleviate the curse of dimensionality induced by these transformations, we must exploit the intrinsic structures of Hankel and L}{\DIFadd{\"o}}\DIFadd{wner. For instance, a tensor–vector multiplication involving a Hankel tensor $\mathten{H}^{K} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ can be performed in $\mathcal{O}(N \log(N))$ flops using the FFT }[] \DIFadd{instead of the original $\mathcal{O}(\prod_{k=1}^{K} I_k)$ flops required with the naive operation, where $N=\sum_{k=1}^{K} I_k$. Similar to the Hankel case, L}{\DIFadd{\"o}}\DIFadd{wner structures can avoid the curse of dimensionality in the case of equidistant points }[]\DIFadd{.
+}
+
+%DIF > While applying these transformations provide us low-rank intrinsic structures on data, it is inevitable to increase the dimensionality of the ambient space of the source space. To alleviate the curse of dimensionality induced by these transformations, we must exploit the intrinsic structures of Hankel and L{\"o}wner. For instance, a tensor–vector multiplication involving a Hankel tensor $\mathten{H}^{K} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ can be performed in $\mathcal{O}(N \log(N))$ flops with $N=\sum_{k=1}^{K} I_k$ using the Fast Fourier Transform instead of the original flops $\mathcal{O}(\prod_{k=1}^{K}) I_k$ required with the naive operation []. Similar to Hankel, L{\"o}wner structures can avoid the curse of dimensionality in the case of equidistant points [].
+
+\subsection{\DIFadd{Factorization of the Vehicle Traffic Feature Tensor}}
+\DIFadd{Although we can extract a bunch set of multidimensional information to our VFT tensor in different ways, we will focus our attention on two fundamental problems: the pattern recognition and the use of multilinear transformations to enforce low-rank assumptions on tensor models. We start by analyzing the pattern recognition followed by low-rank models under multilinear transformations.
+}
+
+\subsubsection{\DIFadd{Pattern Recognition}}
+\DIFadd{Through the VTF model we can exploit multi-mode correlations by Tensor Decompositions (TD), which provide a powerful analytical tool for dealing with multidimensional statics. Common TD employed include the CP-decomposition, Tucker model, HoSVD, and an SVD-based on the t-product called t-SVD, where the choice of a particular decomposition must be application dependent. The CP model is generally used for latent factor extraction, while the Tucker model to uncover hidden pattern in data. On the other hand, the choice of the t-SVD is more suitable when dealing with oriented-tensors.
+}
+
+\subsubsection{\DIFadd{Low-rank by Multilinear Transformations}}
+%DIF > A classical model employed in many real-world applications is the (multidimensional) low-rank signal model [], which states that any measurement tensor $\mathten{X}\in\mathbb{R}^{I_1\times \cdots I_N}$ can be approximately decomposed as the sum of two components, a low-rank tensor $\mathten{L}\in\mathbb{R}^{I_1\times \cdots I_N}$, and a small Independent and Identically Distributed (IID) dense noise tensor $\mathten{N}\in\mathbb{R}^{I_1\times \cdots I_N}$, i.e., $\mathten{X} = \mathten{L} + \mathten{N}$.
+
+\DIFaddend A \DIFdelbegin \DIFdel{common model used in many problems }\DIFdelend \DIFaddbegin \DIFadd{classical model employed in many real-world applications }\DIFaddend is the (multidimensional) low-rank \DIFdelbegin \DIFdel{signal model (see Equation \ref{eq:lowrankmodel}) }\DIFdelend \DIFaddbegin \DIFadd{model (LRM) }[]\DIFaddend , which states that any \DIFdelbegin \DIFdel{observable tensor $\mathten{X}\in\mathbb{K}^{I_1\times \cdots I_N}$ can be (approximately) decomposed }\DIFdelend \DIFaddbegin \DIFadd{measurement tensor $\mathten{X}\in\mathbb{R}^{I_1\times \cdots I_N}$ can be approximated }\DIFaddend as the sum of two components, a low-rank tensor \DIFdelbegin \DIFdel{$\mathten{L}\in\mathbb{K}^{I_1\times \cdots I_N}$}\DIFdelend \DIFaddbegin \DIFadd{$\mathten{L}\in\mathbb{R}^{I_1\times \cdots I_N}$}\DIFaddend , and a small dense noise \DIFdelbegin \DIFdel{tensor $\mathten{N}\in\mathbb{K}^{I_1\times \cdots I_N}$.Although this decomposition can be solved by several tensor models, such as Tucker, CP, t-SVD or t-RPCA decompositions (see Section \ref{sec:tensoralg}), we only analyze  the t-SVD and t-RPCA. }\DIFdelend \DIFaddbegin \DIFadd{or approximation error tensor $\mathten{N}\in\mathbb{R}^{I_1\times \cdots I_N}$, i.e., $\mathten{X} = \mathten{L} \simeq \mathten{N}$. This model is posed as an optimization problem, where in its simplest form, it can be formulated by minimizing the Frobenius norm  as Equation \ref{eq:lowrankmodel} shows.
+}\DIFaddend 
+
+\DIFaddbegin \begin{equation}
+\DIFadd{\min_{\mathten{L}} }{\DIFadd{\left\lVert \mathten{X}-\mathten{L} \right\rVert}}\DIFadd{_{F}^2
 \label{eq:lowrankmodel}
-\end{equation}
+}\end{equation}
 
-PREVIO A LA APLICACION DE LAS DESCOMPOSICIONES TENSORIALES, SE PRETENDE USAR LAS TRANSFORMACIONES DE HANKEL Y LOEWNER:
-HANKEL PROVE ESTRUCTURAS DE BAJO RANGO EN EL CASO DE SIN-RUIDO, SIN EMBARGO EN GENERAL ESTO NO SE TIENE EN LA PRACTICA, POR LO TANTO PARA MODELAR LAS CARACTERISTICAS GEOMETRICAS Y CINEMATICASDE NUESTRO TENSOR. POR OTRO LADO EL MODELADO DE LAS CARACTERISTICAS COMO FUNCIONES RACIONALES.
 
-EMPLEAMOS LOS MODELOS SEGUIDOS DE UN TRUNCAMIENTO DE LA T-SVD, DESCARTANDO AQUELLOS VALORES SINGULARES MULTIDIMENSIONALES QUE NO APORTEN SUFICIENTE INFORMACION DE ACUERDO A SU DISTRIBUCION. ADICIONALMENTE EL USO DE T-RPCA PARA GENERAR MODELOS MAS ROBUSTOS FRENTE A CORRUPCION EN LOS DATOS.
 
-PRESENTAR CONTRIBUCIONES EN EL MODELADO DE DATOS EN EL USO DE ESTAS DOS TRANSFORMACIONES, ASI COMO CARACTERISTICAS DE LOS TENSORES RESULTANTES COMO LO SON SUS RANGOS, TRABAJOS RELACIONADOS CON CP Y TUCKER.
+\DIFadd{However, the brittleness of LRM with respect to grossly corrupted observations, often causes non optimal solutions }[]\DIFadd{. For this reason, it is very common to replace \ref{eq:lowrankmodel} by its robust version $\mathten{X} \simeq \mathten{L} + \mathten{S} + \mathten{N}$ called Robust LRM (RLRM), which is commonly formulated as the minimization problem of Equation \ref{eq:lowrankmodel2}, where $\left\lVert \cdot \right\rVert_\star$ denotes the tensor nuclear norm, $\left\lVert \cdot \right\rVert_1$ the $L_1$-norm, and $\mathten{S}\in\mathbb{R}^{I_1\times \cdots I_N}$ a sparse component which models grossly corruptions. This decomposition model can be consider as a generalization of Equation \ref{eq:lowrankmodel}, since in the case of free-corruption, Equation \ref{eq:lowrankmodel2} is equivalent to \ref{eq:lowrankmodel}.
+}
+
+\DIFaddend \begin{equation}
+\DIFdelbegin \DIFdel{\mathten{X}= }\DIFdelend \DIFaddbegin \DIFadd{\min_{\mathten{L,S}} }{\left\lVert\DIFaddend \mathten{L}\DIFaddbegin \right\rVert\DIFadd{_\star }\DIFaddend + \DIFdelbegin \DIFdel{\mathten{N}
+}%DIFDELCMD < \label{eq:lowrankmodel}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \left\lVert\DIFadd{\mathten{S}}\right\rVert\DIFadd{_1}}
+\label{eq:lowrankmodel2}
+\DIFaddend \end{equation}
+
+\DIFdelbegin \DIFdel{PREVIO A LA APLICACION DE LAS DESCOMPOSICIONES TENSORIALES, SE PRETENDE USAR LAS TRANSFORMACIONES DE HANKEL Y LOEWNER:
+HANKEL PROVE ESTRUCTURAS DE BAJO RANGO EN EL CASO DE SIN-RUIDO, SIN EMBARGO EN GENERAL ESTO NO SE TIENE EN LA PRACTICA, POR LO TANTO PARA MODELAR LAS CARACTERISTICAS GEOMETRICAS Y CINEMATICASDE NUESTRO TENSOR. POR OTRO LADO EL MODELADO DE LAS CARACTERISTICAS COMO FUNCIONES RACIONALES.}\DIFdelend %DIF > From most of the TD such as the Tucker, CP and t-SVD decompositions, we can estimate $\mathten{L}$ and $\mathten{N}$, while from just a few decompositions, e.g., t-RPCA, to $\mathten{S}$. Although low-rank models are not limited to the use of specific decompositions, here we will only focus on the use of t-SVD and t-RPCA decompositions for solving Equations \ref{eq:lowrankmodel} and \ref{eq:lowrankmodel2} respectively. 
+
+\DIFaddbegin \DIFadd{Although there exist many related works that successfully solve these models }[\DIFadd{15, 34}]\DIFadd{, the RLRM lacks optimality when the intrinsic structure of a tensor is of high-rank, a situation that often happen in practice, which leads to a global solution that is not exactly low-rank. However, recently Li, C., et. al, }[\DIFadd{x}]\DIFadd{, showed that a low-rank based matrix completion problem can obtain better performance by exploiting the low-rank structure resulted after transforming an observed matrix $\mathmat{X}\in\mathbb{R}^{m \times n}$ into a new representation $\mathmat{Y}\in\mathbb{R}^{m \times n}$ by applying a set of $K$ linear transformations $\{\mathcal{Q}_i(\cdot)\}_{i=1}^K$, ideas that established the foundations for a framework called Matrix Completion under Multiple linear Transformations (MCMT). MCMT is formulated as an optimization problem (see Equation \ref{eq:mcmtmodel}), where $\mathcal{P}_\Omega(\cdot)$ denotes a downsampling operation over the supporting set $\Omega$, and $\delta\in\mathbb{R}^+$ a small constant.
+}
+
+\begin{equation}
+	\DIFadd{\begin{aligned}
+		\min_{\mathmat{X}} \quad & {\sum_{i=1}^{K} \left\lVert \mathcal{Q}_i(\mathmat{X}) \right\rVert_*}\\
+		\textrm{s.t.} \quad & \left\lVert \mathcal{P}_\Omega(\mathmat{X}) - \mathcal{P}_\Omega(\mathmat{Y}) \right\rVert_F < \delta
+	\end{aligned}
+\label{eq:mcmtmodel}
+}\end{equation}
+
+\DIFadd{Following the ideas behind MCMT on matrices, we propose the high-order RLRM under Multilinear Transformations (HoRLRM$^2$T) with applications to modeling and approximation of functions, where we exploit the additional multi-mode low-rank structures of the transformed tensors.
+}\DIFaddend EMPLEAMOS LOS MODELOS SEGUIDOS DE UN TRUNCAMIENTO DE LA T-SVD, DESCARTANDO AQUELLOS VALORES SINGULARES MULTIDIMENSIONALES QUE NO APORTEN SUFICIENTE INFORMACION DE ACUERDO A SU DISTRIBUCION. ADICIONALMENTE EL USO DE T-RPCA PARA GENERAR MODELOS MAS ROBUSTOS FRENTE A CORRUPCION EN LOS DATOS.
+\DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend PRESENTAR CONTRIBUCIONES EN EL MODELADO DE DATOS EN EL USO DE ESTAS DOS TRANSFORMACIONES, ASI COMO CARACTERISTICAS DE LOS TENSORES RESULTANTES COMO LO SON SUS RANGOS, TRABAJOS RELACIONADOS CON CP Y TUCKER.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -504,8 +583,12 @@ Authors should discuss the results and how they can be interpreted in perspectiv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 CONCLUSIONES DEL LOW-RANK Y TRANSFORMACIONES, CUANDO CONOCEMOS LA FORMA ALGEBRAICA DE LAS CARACTERISTICAS SE EMPLEA HANKEL+T-SVD, DE OTRO MODO LOEWNER + T-RPCA, EL USO DE ESTOS MODELOS DE BAJO RANGO NOS AYUDAN A ELIMINAR DISTURBIOS EN LOS DATOS, CON LO CUAL SE PUEDE MEJORAR LOS MODELOS DE CLASIFICACION Y OCLUSION.
+\DIFaddbegin \\
+\\
+\DIFadd{TRABAJO FUTURO: 1. USO DE TRANSFORMACIONES MULTI-LINEALES? ESTOCASTICAS, ASI  COMO NO LINEALES. 2. USO DE LAS DESCOMPOSICIONES TENSORIALES CON RESTRICCIONES ESTRUCTURADAS (HANKEL, LOEWNER, ETC), ASI COMO OTRAS RESTRICCIONES (NO NEGATIVIDAD).
+}\DIFaddend 
 
-This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex.
+\DIFdelbegin \DIFdel{This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex. }\DIFdelend %DIF > This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\section{Patents}

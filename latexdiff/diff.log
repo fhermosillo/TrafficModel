@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  12 OCT 2020 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  16 OCT 2020 12:19
 entering extended mode
 **./diff.tex
 (diff.tex
@@ -1142,7 +1142,7 @@ LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 248.
 {C:/Users/Fernando/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Defini
 tions/logo-mdpi-eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 280.
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 277.
 
 [2]
 
@@ -1157,105 +1157,254 @@ File: images/traffic-model.png Graphic file (type png)
 Package pdftex.def Info: images/traffic-model.png  used on input line 305.
 (pdftex.def)             Requested size: 398.33858pt x 183.50237pt.
 
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 315.
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 311.
 
 [3 <./images/traffic-model.png>]
-Underfull \hbox (badness 4120) in paragraph at lines 325--326
-[]\T1/ppl/m/n/10 (+20) Through the VTF ten-sor we can ex-ploit the multi-mode c
-or-re-la-tions, for ex-am-ple,
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
+]   |   []   |   []
  []
 
 
-LaTeX Warning: Reference `eq:hankelization' on page 4 undefined on input line 3
-32.
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
+  |   []   |   []
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 335.
+Underfull \hbox (badness 4291) in paragraph at lines 324--325
+|   []   |   []   |   []   |   []   |   []
+ []
 
-[4]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 326.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sout' on input line 326.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 331.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sout' on input line 331.
+
+
+LaTeX Warning: Reference `eq:vtf3model' on page 4 undefined on input line 336.
+
+
+Underfull \hbox (badness 5681) in paragraph at lines 334--337
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
+]   |   []   |   []   |   []
+ []
+
+
+LaTeX Warning: Reference `eq:vtf5model' on page 4 undefined on input line 343.
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 344.
+
+[4]pdfTeX warning (ext4): destination with the same identifier (name{subsubsect
+ion.4.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.350 ...hicle Traffic Feature Tensor}\DIFaddend }
+                                                  
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 350.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sout' on input line 350.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 350.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 350.
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 354--355
+[]|   []   |   []   [][]|   []   |   []   []\T1/ppl/m/n/10 (+20) lin-ear trans-
+for-ma-tions, []|   []   |   []   |   []   |   []   |   []
+ []
+
 
 LaTeX Warning: Reference `eq:hankelization' on page 5 undefined on input line 3
-44.
+56.
+
+
+LaTeX Warning: Reference `eq:hankelization' on page 5 undefined on input line 3
+56.
 
 
 LaTeX Warning: Reference `eq:loewnerization' on page 5 undefined on input line 
-347.
+356.
 
 
-LaTeX Warning: Reference `eq:loewnerization' on page 5 undefined on input line 
-362.
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 372.
 
+[5]
 
-LaTeX Warning: Reference `eq:lowrankmodel' on page 5 undefined on input line 37
+LaTeX Warning: Reference `eq:hankelsample' on page 6 undefined on input line 37
 9.
 
 
-LaTeX Warning: Reference `sec:tensoralg' on page 5 undefined on input line 379.
+LaTeX Warning: Reference `eq:loewnersample' on page 6 undefined on input line 3
+79.
+
+
+LaTeX Warning: Reference `eq:loewnersample' on page 6 undefined on input line 3
+79.
+
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.4.
+3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.418 ...n of the Vehicle Traffic Feature Tensor}}
+                                                  
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 418.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 418.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 422.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 422.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 426.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 426.
+
+
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 42
+9.
+
+
+LaTeX Warning: Reference `sec:tensoralg' on page 6 undefined on input line 429.
 
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 389--390
-[]\T1/ppl/m/n/10 (+20) EMPLEAMOS LOS MOD-E-LOS SEGUI-DOS DE UN TRUN-CAMIENTO DE
- LA T-SVD,
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 43
+0.
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 431.
+
+[6]
+
+LaTeX Warning: Reference `eq:lowrankmodel' on page 7 undefined on input line 44
+0.
+
+
+LaTeX Warning: Reference `eq:lowrankmodel2' on page 7 undefined on input line 4
+40.
+
+
+LaTeX Warning: Reference `eq:lowrankmodel' on page 7 undefined on input line 44
+0.
+
+
+LaTeX Warning: Reference `eq:lowrankmodel2' on page 7 undefined on input line 4
+40.
+
+
+LaTeX Warning: Reference `eq:lowrankmodel' on page 7 undefined on input line 44
+0.
+
+
+LaTeX Warning: Reference `eq:mcmtmodel' on page 7 undefined on input line 454.
+
+
+Underfull \hbox (badness 3323) in paragraph at lines 465--467
+|   []   []\T1/ppl/m/n/10 (+20) EM-PLEAMOS LOS MOD-E-LOS SEGUI-DOS DE UN TRUN-C
+AMIENTO DE LA
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
-\T1/ppl/m/n/10 (+20) DESCAR-TANDO AQUE-L-LOS VAL-ORES SIN-GU-LARES MUL-TI-DI-ME
-N-SION-ALES QUE
+Underfull \hbox (badness 10000) in paragraph at lines 465--467
+\T1/ppl/m/n/10 (+20) T-SVD, DESCAR-TANDO AQUE-L-LOS VAL-ORES SIN-GU-LARES MUL-T
+I-DI-MEN-SION-ALES
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
-\T1/ppl/m/n/10 (+20) NO APORTEN SU-FI-CIENTE IN-FOR-MA-CION DE ACUERDO A SU DIS
--TRIBU-CION.
+Underfull \hbox (badness 1460) in paragraph at lines 465--467
+\T1/ppl/m/n/10 (+20) QUE NO APORTEN SU-FI-CIENTE IN-FOR-MA-CION DE ACUERDO A SU
+ DIS-TRIBU-CION.
  []
 
 
-Underfull \hbox (badness 1436) in paragraph at lines 389--390
-\T1/ppl/m/n/10 (+20) ADI-CIONAL-MENTE EL USO DE T-RPCA PARA GENERAR MOD-E-LOS M
-AS RO-BUS-TOS
- []
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 570.
 
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 399.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 547--547
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 585--590
 
  []
 
+
+Underfull \hbox (badness 1478) in paragraph at lines 585--590
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [] 
+  |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--590
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
+
+ []
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 666.
+
+[8]
 LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 6
-02.
-("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
+85.
+ ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 602.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 685.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 602.
+Package lastpage Warning: Rerun to get the references right on input line 685.
 
 
 AED: lastpage setting LastPage
 
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 602.
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 685.
 
-[6]
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 602.
-
-[7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
  (diff.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 602.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
 
 
 Package rerunfilecheck Warning: File `diff.out' has changed.
@@ -1264,7 +1413,7 @@ Package rerunfilecheck Warning: File `diff.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `diff.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  4D0B56D5EDAAE6361BA808055EAB63D2;2715.
+(rerunfilecheck)             After:  294B1DC651D4DB594A8E7B7476673215;3824.
 
 LaTeX Warning: There were undefined references.
 
@@ -1273,13 +1422,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 27691 strings out of 492452
- 473590 string characters out of 3126551
- 586534 words of memory out of 3000000
- 31326 multiletter control sequences out of 15000+200000
- 70714 words of font info for 252 fonts, out of 3000000 for 9000
+ 27705 strings out of 492452
+ 473805 string characters out of 3126551
+ 634534 words of memory out of 3000000
+ 31337 multiletter control sequences out of 15000+200000
+ 74080 words of font info for 252 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,17n,64p,2409b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,18n,64p,2515b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ecss0500.pk>{D:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
@@ -1288,17 +1437,18 @@ D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D
 :/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/
 Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/A
 rchivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Arc
-hivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archivo
-s de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de 
-programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de prog
-rama/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de 
-programa/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos
- de programa/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de pro
-grama/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/M
-iKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diff.pdf (7 pages, 1138691 bytes).
+hivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmb.pfb><D:/Archivos
+ de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archivos de 
+programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de progr
+ama/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de programa/
+MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de progr
+ama/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos de p
+rograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de programa
+/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/MiKTeX
+ 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diff.pdf (9 pages, 1180503 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 43543 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 44567 words of extra memory for PDF output out of 51595 (max. 10000000)
 
