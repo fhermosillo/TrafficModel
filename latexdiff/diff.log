@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  30 OCT 2020 09:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.5.14)  3 NOV 2020 19:40
 entering extended mode
 **./diff.tex
 (diff.tex
@@ -1174,198 +1174,182 @@ LaTeX Warning: Reference `eq:mltransform' on page 4 undefined on input line 338
 .
 
 
-LaTeX Warning: Reference `def:hankeltrans' on page 4 undefined on input line 34
-6.
+LaTeX Warning: Reference `def:hankeltrans' on page 4 undefined on input line 35
+0.
 
 
 LaTeX Warning: Reference `def:loewnertrans' on page 4 undefined on input line 3
-46.
+50.
 
 
-LaTeX Warning: Reference `def:hankel' on page 4 undefined on input line 346.
+Underfull \hbox (badness 2529) in paragraph at lines 348--354
+[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
+]   |   []
+ []
 
 
-LaTeX Warning: Reference `def:loewner' on page 4 undefined on input line 346.
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 347.
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 354.
 
 [4]
 
 LaTeX Warning: Reference `eq:hankelization' on page 5 undefined on input line 3
-61.
+74.
 
 
 LaTeX Warning: Reference `eq:loewnerization' on page 5 undefined on input line 
-373.
+386.
 
 
-LaTeX Warning: Reference `eq:hankelsample' on page 5 undefined on input line 38
-3.
+LaTeX Warning: Reference `eq:hankelsample' on page 5 undefined on input line 43
+1.
 
 
-LaTeX Warning: Reference `eq:loewnersample' on page 5 undefined on input line 3
-83.
+LaTeX Warning: Reference `eq:loewnersample' on page 5 undefined on input line 4
+31.
 
 
-LaTeX Warning: Reference `eq:loewnersample' on page 5 undefined on input line 3
-83.
+LaTeX Warning: Reference `eq:loewnersample' on page 5 undefined on input line 4
+31.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 424.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sout' on input line 424.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 424.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 424.
-
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 427.
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 483.
 
 [5]
 
-LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 43
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 49
 0.
 
 
-LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 43
-9.
+LaTeX Warning: Reference `eq:lrmodel' on page 6 undefined on input line 490.
 
 
-LaTeX Warning: Reference `eq:lowrankmodel2' on page 6 undefined on input line 4
-39.
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 51
+1.
 
 
-LaTeX Warning: Reference `eq:rlrmodel' on page 6 undefined on input line 439.
+LaTeX Warning: Reference `eq:lrmodel' on page 6 undefined on input line 511.
 
 
-LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 43
-9.
+LaTeX Warning: Reference `eq:rlrmodel' on page 6 undefined on input line 511.
 
 
-LaTeX Warning: Reference `eq:lowrankmodel2' on page 6 undefined on input line 4
-39.
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 51
+1.
 
 
-LaTeX Warning: Reference `eq:rlrmodel' on page 6 undefined on input line 439.
+LaTeX Warning: Reference `eq:lrmodel' on page 6 undefined on input line 511.
 
 
-LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 43
-9.
+LaTeX Warning: Reference `eq:rlrmodel' on page 6 undefined on input line 511.
 
 
-LaTeX Warning: Reference `eq:mcmtmodel' on page 6 undefined on input line 458.
+LaTeX Warning: Reference `eq:lowrankmodel' on page 6 undefined on input line 51
+1.
 
 
-LaTeX Warning: Reference `eq:horlrmmt' on page 6 undefined on input line 464.
+LaTeX Warning: Reference `eq:lrmodel' on page 6 undefined on input line 511.
 
 
-Underfull \hbox (badness 4416) in paragraph at lines 484--486
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]   |   []   |   []   |   []
- []
+LaTeX Warning: Reference `eq:horlrmmt' on page 6 undefined on input line 527.
 
 
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 486.
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 528.
 
 [6]
-Underfull \hbox (badness 1092) in paragraph at lines 515--517
-[]|   [][]\T1/ppl/m/n/10 (+20) . EM-PLEAMOS LOS MOD-E-LOS SEGUI-DOS DE UN
- []
 
-
-Underfull \hbox (badness 2913) in paragraph at lines 515--517
-\T1/ppl/m/n/10 (+20) TRUN-CAMIENTO DE LA T-SVD, DESCAR-TANDO AQUE-L-LOS VAL-ORE
-S SIN-GU-LARES
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 588.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 528.
+(hyperref)                removing `\sout' on input line 588.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sout' on input line 528.
+(hyperref)                removing `\@ifnextchar' on input line 588.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 528.
+(hyperref)                removing `\uwave' on input line 588.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uwave' on input line 528.
+(hyperref)                removing `\@ifnextchar' on input line 588.
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 645--651
-[]|   []   |   []   |   []   |   []   |   []   [][]|   []   |   []
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 588.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--651
-
- []
-
-
-Underfull \hbox (badness 1199) in paragraph at lines 645--651
-[]|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   [
-]
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 588.
 
 
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 651.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sout' on input line 588.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 588.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uwave' on input line 588.
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 701.
 
 [7]
-Underfull \hbox (badness 5008) in paragraph at lines 654--657
-|   []   |   [][][]|   []   |   []   |   []   |   []   |   []   |   []   |   []
-   |   []   |   []   |   []   |   []   |   []
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
+[]\T1/ppl/b/n/10 CONCLUSIONES DEL LOW-RANK []|   []   [][]|   []   []TRANS-FOR-
+MA-CIONES\T1/ppl/m/n/10 (+20) . []|   []
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 654--657
-|   []   |   []   |   []   |   []   [][]|   []   |   []   |   []   |   []   |  
- []   |   []
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
+|   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []   |   []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 701--701
+Underfull \hbox (badness 10000) in paragraph at lines 721--725
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 7
-56.
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 761.
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 773--773
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+ppl on input line 8
+28.
 ("D:\Archivos de programa\MiKTeX 2.9\tex/latex/psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 756.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 828.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 756.
+Package lastpage Warning: Rerun to get the references right on input line 828.
 
 
 AED: lastpage setting LastPage
 
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 756.
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 828.
 
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 756.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 756.
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
  (diff.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 756.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 756.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 828.
 
 
 Package rerunfilecheck Warning: File `diff.out' has changed.
@@ -1374,7 +1358,7 @@ Package rerunfilecheck Warning: File `diff.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `diff.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A2E70F7299BAFB471E5C4A80690F90A0;3918.
+(rerunfilecheck)             After:  41BA5D2086887B167701940E06FC4E49;4156.
 
 LaTeX Warning: There were undefined references.
 
@@ -1383,33 +1367,34 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 27754 strings out of 492452
- 474297 string characters out of 3126551
+ 27755 strings out of 492452
+ 474270 string characters out of 3126551
  608534 words of memory out of 3000000
- 31345 multiletter control sequences out of 15000+200000
- 75679 words of font info for 275 fonts, out of 3000000 for 9000
+ 31342 multiletter control sequences out of 15000+200000
+ 75971 words of font info for 276 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,17n,64p,2409b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,17n,64p,2409b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Fernando\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ecss0500.pk>{D:/Archivos de programa/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}
 <D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
-<D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D
-:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/
-Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/A
-rchivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Arc
-hivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmb.pfb><D:/Archivos
- de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archivos de 
-programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de progr
-ama/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de programa/
-MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de progr
-ama/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos de p
-rograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de programa
-/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/MiKTeX
- 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diff.pdf (8 pages, 1169679 bytes).
+<D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+D:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D
+:/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:
+/Archivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/A
+rchivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Ar
+chivos de programa/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Arch
+ivos de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmb.pfb><D:/Archivos 
+de programa/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmbi.pfb><D:/Archivos de p
+rograma/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmr.pfb><D:/Archivos de progra
+ma/MiKTeX 2.9/fonts/type1/public/mathpazo/fplmri.pfb><D:/Archivos de programa/M
+iKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy6.pfb><D:/Archivos de progra
+ma/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Archivos de pr
+ograma/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><D:/Archivos de programa/
+MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><D:/Archivos de programa/MiKTeX 
+2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diff.pdf (9 pages, 1186041 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
  44567 words of extra memory for PDF output out of 51595 (max. 10000000)
 

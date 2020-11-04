@@ -294,19 +294,27 @@ Following the above ideas, additional modes can also be added for a more general
 \end{equation}
 
 \subsubsection{Multilinear Transformations over the Vehicle Traffic Feature Tensor}
-For any problem which involves the use of tensor structures, TD allow us to  exploit the intrinsic high-order structure of data, therefore, choosing an appropriate representation of data is a key component to improve any decomposition model. Multilinear transformations, which aim to express a multidimensional vector space $V_1 \times \cdots \times V_n$ as their multilinear combination by applying some mapping function of several variables that is linear separately in each variable (see Equation \ref{eq:mltransform}), allow to find other data representations that could be more suitable for a particular TD.
+For any problem which involves tensor structures, TD allow us to  exploit the intrinsic multidimensional structure of data, therefore, choosing an appropriate representation of data is a key ingredient to improve any decomposition model. Multilinear Transformations (MLT) [] allow us to represent high-order tensors in different ways by imposing some structured representation on data that could be more suitable for a particular TD. Here, we are seeking for those functions which provide a higher-order representation of data while inducing well-known intrinsic structures, where from all possible known MLT that hold the above, we focus on the deterministic Hankelization and L{\"o}wnerization (see Definition \ref{def:hankeltrans} and \ref{def:loewnertrans}), which transform the input space into an structured higher-order Hankel or L{\"o}wner tensor that intrinsically enforcing an approximately low multilinear-rank [x].
+
+ 
 
 
-\begin{equation}
-f : V_1 \times \cdots \times V_n \rightarrow W
-\label{eq:mltransform}
-\end{equation}
 
-Similar to linear transformations, multilinear transformations also provide us different properties or structures [] that can be exploited according to the problem faced, hence the use of a particular transformation must be application dependent. Here, we will seek for those functions which provide a higher-order representation of data while inducing well-known intrinsic structures. The first desired property will be needed for both preserving linear mixtures of the source space and avoids to introduce non-separable terms [], while the second property will allow us to enjoy useful properties to be exploited in TD. For that purpose, we employed two deterministic multilinear transformations called Hankelization and L{\"o}wnerization (see Definition \ref{def:hankeltrans} and \ref{def:loewnertrans}), which map the source space into a higher-order structure that have approximately an intrinsic low multilinear-rank [x]. On the other hand, these transformations enjoy some useful properties for data modeling, for example, Hankel structures are known for representing exponential polynomials [], while L{\"o}wner structures show a very close relationship with rational functions [], so that they can be used to model and approximate a wide variety of functions.
+%For any problem which involves the use of tensor structures, TD allow us to  exploit the intrinsic multidimensional structure of data, therefore, choosing an appropriate representation of data is a key component to improve any decomposition model. Multilinear transformations, which aim to express a multidimensional vector space $V_1 \times \cdots \times V_n$ as their multilinear combination by applying some mapping function of several variables that is linear separately in each variable (see Equation \ref{eq:mltransform}), allow to find other data representations that could be more suitable for a particular TD.
+
+
+%\begin{equation}
+%f : V_1 \times \cdots \times V_n \rightarrow W
+%\label{eq:mltransform}
+%\end{equation}
+
+%Similar to linear transformations, multilinear transformations also provide us different properties or structures [] that can be exploited according to the problem faced, hence the use of a particular transformation must be application dependent. Here, we will seek for those functions which provide a higher-order representation of data while inducing well-known intrinsic structures. The first desired property will be needed for both preserving linear mixtures of the source space and avoids to introduce non-separable terms [], while the second property will allow us to enjoy useful properties to be exploited in TD. For that purpose, we employed two deterministic multilinear transformations called Hankelization and L{\"o}wnerization (see Definition \ref{def:hankeltrans} and \ref{def:loewnertrans}), which map the source space into a higher-order structure that have approximately an intrinsic low multilinear-rank [x]. On the other hand, these transformations enjoy some useful properties for data modeling, for example, Hankel structures are known for representing exponential polynomials [], while L{\"o}wner structures show a very close relationship with rational functions [], so that they can be used to model and approximate a wide variety of functions.
+
+%For that purpose, we employed two deterministic multilinear transformations called Hankelization and L{\"o}wnerization (see Definition \ref{def:hankeltrans} and \ref{def:loewnertrans}), which map the source space into a higher-order structure that have approximately an intrinsic low multilinear-rank [x]. On the other hand, these transformations enjoy some useful properties for data modeling, for example, Hankel structures are known for representing exponential polynomials [], while L{\"o}wner structures show a very close relationship with rational functions [], so that they can be used to model and approximate a wide variety of functions. An example of the Hankelization and  L{\"o}wnerization transformations are shown in Equations \ref{eq:hankelsample} and \ref{eq:loewnersample} respectively.
 	
 \begin{Definition}[Hankelization Transformation]
 	\label{def:hankeltrans}
-	The $K$th-order Hankelization is a transformation that maps any vector $\mathvec{x}\in\mathbb{R}^N$ into a $K$th-order tensor $\mathten{H}^{(K)} \in\mathbb{R}^{I_1 \times \cdots \times I_K}$ called Hankel tensor with constant anti-diagonal hyperplanes as Equation \ref{eq:hankelization} shows, where $\mathcal{H}$ is the Hankelization transformation, and $N = \sum_{k=1}^{K} {I_k} - K + 1$.
+	The $K$th-order Hankelization is a transformation that maps any vector $\mathvec{x}\in\mathbb{R}^N$ into a $K$th-order Hankel structured tensor $\mathten{H}^{(K)} \in\mathbb{R}^{I_1 \times \cdots \times I_K}$ with constant anti-diagonal hyperplanes as Equation \ref{eq:hankelization} shows, where $\mathcal{H}$ is the Hankelization transformation, and $N = \sum_{k=1}^{K} {I_k} - K + 1$.
 	% Into a Kth-order Hankel tensor with constant ...
 	% N = I_1 + ... + I_K - K + 1
 	
@@ -318,7 +326,7 @@ Similar to linear transformations, multilinear transformations also provide us d
 
 \begin{Definition}[L{\"o}wnerization Transformation]
 	\label{def:loewnertrans}
-	The $K$th-order L{\"o}wnerization is a transformation that maps a vectorized function $\mathvec{x}(\boldsymbol{\phi})\in\mathbb{R}^N$ evaluated at $N$ points $\boldsymbol{\phi}\in\mathbb{R}^{N}$ into a $K$th-order tensor $\mathten{L}^{(K)} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ called L{\"o}wner tensor such that each entry is defined as Equation \ref{eq:loewnerization} shows, where $\mathcal{L}$ is the $K$th-order L{\"o}wnerization transformation, while $\mathvec{f}^{(p)}$ is the $p$th subset of $\boldsymbol{\phi}$, which holds that  $\mathvec{f}^{(p)} \bigcap \mathvec{f}^{(q)} = \boldsymbol{\emptyset} \:\:\forall p \neq q$, and $\boldsymbol{\phi}=\bigcup_{k=1}^{K} {\mathvec{f}^{(k)}}$.
+	The $K$th-order L{\"o}wnerization is a transformation that maps a vectorized function $\mathvec{x}(\boldsymbol{\phi})\in\mathbb{R}^N$ evaluated at $N$ points $\boldsymbol{\phi}\in\mathbb{R}^{N}$ into a $K$th-order L{\"o}wner structured tensor $\mathten{L}^{(K)} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$, such that each entry is defined as Equation \ref{eq:loewnerization} shows, where $\mathcal{L}$ is the $K$th-order L{\"o}wnerization transformation, while $\mathvec{f}^{(p)}$ is the $p$th disjoint subset of $\boldsymbol{\phi}$, i.e., $\mathvec{f}^{(p)} \bigcap \mathvec{f}^{(q)} = \boldsymbol{\emptyset} \:\:\forall p \neq q$, and $\boldsymbol{\phi}=\bigcup_{k=1}^{K} {\mathvec{f}^{(k)}}$.
 	% Into a Kth-order Loewner tensor such that ...
 	% the pth disjoint subset of Phi, i.e., f^(p) Intersection ...
 	
@@ -328,63 +336,72 @@ Similar to linear transformations, multilinear transformations also provide us d
 	\end{equation}
 \end{Definition}
 
-An example of the second-order Hankelization and  L{\"o}wnerization transformations are shown in Equations \ref{eq:hankelsample} and \ref{eq:loewnersample} respectively. In Equation \ref{eq:loewnersample}, it is assumed that the set of evaluation points is $\mathvec{t}=\{1,\:\:2,\:\:3,\:\:4\}$ which is partitioned into the two disjoint subsets $\mathvec{f}_1=\{1,\:\:3\}$ and $\mathvec{f}_2=\{2,\:\:4\}$.
+%An example of the second-order Hankelization and  L{\"o}wnerization transformations are shown in Equations \ref{eq:hankelsample} and \ref{eq:loewnersample} respectively. In Equation \ref{eq:loewnersample}, it is assumed that the set of evaluation points is $\mathvec{t}=\{1,\:\:2,\:\:3,\:\:4\}$ which is partitioned into the two disjoint subsets $\mathvec{f}_1=\{1,\:\:3\}$ and $\mathvec{f}_2=\{2,\:\:4\}$.
+%
+%\begin{equation}
+%	\mathten{H}^{(2)} = \mathcal{H}\left(
+%	\begin{bmatrix}
+%		7 & 6 & 15 & 12
+%	\end{bmatrix}
+%	\right) =
+%	\begin{bmatrix}
+%	7 & 6 & 15 \\
+%	6 & 15 & 12
+%	\end{bmatrix}
+%	\label{eq:hankelsample}
+%\end{equation}
+%
+%\begin{equation}
+%	\mathten{L}^{(2)} = \mathcal{L}\left(
+%	\begin{bmatrix}
+%	7 & 6 & 15 & 12
+%	\end{bmatrix}
+%	\right) = 
+%	\begin{bmatrix}
+%	\frac{7-6}{1-2} &  \frac{7-12}{1-4} \\
+%	\\
+%	 \frac{15-6}{3-2} & \frac{15-12}{3-4}
+%	\end{bmatrix}
+%	=
+%	\begin{bmatrix}
+%	-1.0000 &  1.6667 \\
+%	9.0000 & -3.0000
+%	\end{bmatrix}	
+%	\label{eq:loewnersample}
+%\end{equation}
 
-\begin{equation}
-	\mathten{H}^{(2)} = \mathcal{H}\left(
-	\begin{bmatrix}
-		7 & 6 & 15 & 12
-	\end{bmatrix}
-	\right) =
-	\begin{bmatrix}
-	7 & 6 & 15 \\
-	6 & 15 & 12
-	\end{bmatrix}
-	\label{eq:hankelsample}
-\end{equation}
+Both Hankel and L{\"o}wner structures enjoy some useful properties for data modeling, for instance, Hankel structures are known for representing exponential polynomials with well-known ranks [], while L{\"o}wner structures show a very close relationship with rational functions that also show similar rank behaviors []. Therefore, they can be used to model and approximate a wide variety of functions. While these transformations appear to be beneficial for exploiting low-rank models in TD, the number of elements in the transformed tensor increases exponentially with the number of dimensions. To alleviate the curse of dimensionality induced by these transformations, we must exploit the intrinsic structures of Hankel and L{\"o}wner in order to avoid the tensor construction at all, as proposed in [x].
 
-\begin{equation}
-	\mathten{L}^{(2)} = \mathcal{L}\left(
-	\begin{bmatrix}
-	7 & 6 & 15 & 12
-	\end{bmatrix}
-	\right) = 
-	\begin{bmatrix}
-	\frac{7-6}{1-2} &  \frac{7-12}{1-4} \\
-	\\
-	 \frac{15-6}{3-2} & \frac{15-12}{3-4}
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-	-1.0000 &  1.6667 \\
-	9.0000 & -3.0000
-	\end{bmatrix}	
-	\label{eq:loewnersample}
-\end{equation}
 
-While the use of these transformations appear to be beneficial to exploit low-rank models in TD, an increase in the volume of the target ambient space is inevitable due to the redundancy introduced by them. To alleviate the curse of dimensionality induced by these transformations, we must exploit the intrinsic structures of Hankel and L{\"o}wner. For instance, a tensor–vector multiplication involving a Hankel tensor $\mathten{H}^{K} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ can be performed in $\mathcal{O}(N \log(N))$ flops using the FFT [] instead of the original $\mathcal{O}(\prod_{k=1}^{K} I_k)$ flops required with the naive operation, where $N=\sum_{k=1}^{K} I_k$. Similar to the Hankel case, L{\"o}wner structures can avoid the curse of dimensionality in the case of equidistant points [].
+%. For instance, a tensor–vector multiplication involving a Hankel tensor $\mathten{H}^{K} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ can be performed in $\mathcal{O}(N \log(N))$ flops using the FFT [] instead of the original $\mathcal{O}(\prod_{k=1}^{K} I_k)$ flops required with the naive operation, where $N=\sum_{k=1}^{K} I_k$. Similar to the Hankel case, L{\"o}wner structures can avoid the curse of dimensionality in the case of equidistant points [].
 
 %While applying these transformations provide us low-rank intrinsic structures on data, it is inevitable to increase the dimensionality of the ambient space of the source space. To alleviate the curse of dimensionality induced by these transformations, we must exploit the intrinsic structures of Hankel and L{\"o}wner. For instance, a tensor–vector multiplication involving a Hankel tensor $\mathten{H}^{K} \in \mathbb{R}^{I_1 \times \cdots \times I_K}$ can be performed in $\mathcal{O}(N \log(N))$ flops with $N=\sum_{k=1}^{K} I_k$ using the Fast Fourier Transform instead of the original flops $\mathcal{O}(\prod_{k=1}^{K}) I_k$ required with the naive operation []. Similar to Hankel, L{\"o}wner structures can avoid the curse of dimensionality in the case of equidistant points [].
 
 \subsection{Factorization of the Vehicle Traffic Feature Tensor}
-Although we can extract a bunch set of multidimensional information to our VFT tensor in different ways, we will focus our attention on two fundamental problems: the pattern recognition for ASDW and the use of multilinear transformations to enforce low-rank assumptions on tensor models. We start by analyzing the pattern recognition of anomaly features followed by low-rank models under multilinear transformations.
+Although we can extract a bunch set of multidimensional information to our VFT tensor in different ways, we will focus our attention on two fundamental problems: the pattern recognition for features anomaly detection and the use of multilinear transformations to enforce low-rank assumptions on tensor models. We start by analyzing the pattern recognition of anomaly features followed by low-rank models under multilinear transformations.
 
 \subsubsection{Pattern Recognition for Anomaly Features Detection}
-Through the VTF model we can exploit multi-mode relations by Tensor Decompositions (TD), which provide a powerful analytical tool for dealing with multidimensional statics. Common TD employed include the CP-decomposition, Tucker model, HoSVD, and an SVD-based on the t-product called t-SVD, where the choice of a particular decomposition must be application dependent. The CP model is generally used for latent factor extraction, while the Tucker model to uncover hidden pattern in data. On the other hand, the choice of the t-SVD is more suitable when dealing with oriented-tensors.
+Through the VTF model we can exploit multi-mode relations by TD, which provide a powerful analytical tool for dealing with multidimensional statics. Common TD employed include the CP-decomposition, Tucker model, HoSVD, and an SVD-based on the t-product called t-SVD, where the choice of a particular decomposition must be application dependent. The CP model is generally used for latent factor extraction, while the Tucker model to uncover hidden pattern in data. On the other hand, the choice of the t-SVD is more suitable when dealing with oriented-tensors.
 
 \subsubsection{High-order Low-rank Model under Multilinear Transformations}
 %A classical model employed in many real-world applications is the (multidimensional) low-rank signal model [], which states that any measurement tensor $\mathten{X}\in\mathbb{R}^{I_1\times \cdots I_N}$ can be approximately decomposed as the sum of two components, a low-rank tensor $\mathten{L}\in\mathbb{R}^{I_1\times \cdots I_N}$, and a small Independent and Identically Distributed (IID) dense noise tensor $\mathten{N}\in\mathbb{R}^{I_1\times \cdots I_N}$, i.e., $\mathten{X} = \mathten{L} + \mathten{N}$.
 
-A classical model employed in many real-world applications is the (multidimensional) low-rank model (LRM) [], which assumes that data have approximately low intrinsic dimensionality, e.g. lie either on some low-dimensional subspace or manifold [15,46], or is sparse in some basis [13]. Formally, LRM states that a tensor $\mathten{X}\in\mathbb{R}^{I_1\times \cdots I_N}$ can be decomposed as $\mathten{X} = \mathten{L} + \mathten{N}$, where $\mathten{L}\in\mathbb{R}^{I_1\times \cdots I_N}$ is a low-rank tensor, and $\mathten{N}\in\mathbb{R}^{I_1\times \cdots I_N}$ a residual tensor, a problem that can be posed as an optimization problem, and is commonly solved by minimizing the Frobenius norm of $\mathten{N}$ as Equation \ref{eq:lowrankmodel} shows.
+A classical model employed in many real-world applications is the (multidimensional) low-rank model (LRM) [], which assumes that data have approximately low intrinsic dimensionality, e.g. lie either on some low-dimensional subspace or manifold [15,46], or is sparse in some basis [13]. Formally, LRM states that any tensor $\mathten{X}\in\mathbb{R}^{I_1\times \cdots I_N}$ can be decomposed as $\mathten{X} = \mathten{L} + \mathten{N}$, where $\mathten{L}\in\mathbb{R}^{I_1\times \cdots I_N}$ is a low-rank tensor, and $\mathten{N}\in\mathbb{R}^{I_1\times \cdots I_N}$ a residual tensor, a problem that can be posed as an optimization problem, and is commonly solved by minimizing the Frobenius norm of $\mathten{N}$ as Equation \ref{eq:lrmodel} shows.
+
 
 \begin{equation}
-\min_{\mathten{L}} {\left\lVert \mathten{X}-\mathten{L} \right\rVert}_{F}^2
-\label{eq:lowrankmodel}
+\begin{aligned}
+	\min_{\mathten{L}} \quad & {\left\lVert \mathten{X}-\mathten{L} \right\rVert}_{F}^2\\
+	\textrm{s.t.} \quad & rank_t(\mathten{L})\leq \mathvec{r}
+\end{aligned}
+\label{eq:lrmodel}
 \end{equation}
 
+where $rank_t(\cdot)$ is the high-order generalization of the matrix rank function which can take several forms, e.g., decomposition rank of the CPD model, the multi-linear rank from the Tucker decomposition, or the tensor tubal rank on the t-product operator. For a complete review on tensor ranks, see [x].
 
 
-However, the brittleness of LRM with respect to grossly corrupted observations, often causes non optimal solutions []. For this reason, it is very common to replace \ref{eq:lowrankmodel} by the robust model $\mathten{X} = \mathten{L} + \mathten{S} + \mathten{N}$, called Robust LRM (RLRM), which is formulated as the optimization problem of Equation \ref{eq:rlrmodel}, where $\left\lVert \cdot \right\rVert_\star$ denotes the tensor nuclear norm, $\left\lVert \cdot \right\rVert_1$ the $L_1$-norm, and $\mathten{S}\in\mathbb{R}^{I_1\times \cdots I_N}$ is a sparse tensor which models grossly corruptions. It should be notice that this decomposition model can be consider as a generalization of Equation \ref{eq:lowrankmodel}, since in the case of free-corruption, Equation \ref{eq:rlrmodel} reduces to \ref{eq:lowrankmodel}.
+
+However, the brittleness of LRM with respect to grossly corrupted observations, often causes non optimal solutions []. For this reason, it is very common to replace \ref{eq:lrmodel} by the robust model $\mathten{X} = \mathten{L} + \mathten{S} + \mathten{N}$, called Robust LRM (RLRM), which is formulated as the optimization problem of Equation \ref{eq:rlrmodel}, where $\left\lVert \cdot \right\rVert_\star$ denotes the tensor nuclear norm, $\left\lVert \cdot \right\rVert_1$ the $L_1$-norm, and $\mathten{S}\in\mathbb{R}^{I_1\times \cdots I_N}$ is a sparse tensor which models grossly corruptions. It should be notice that this decomposition model can be consider as a generalization of Equation \ref{eq:lrmodel}, since in the case of free-corruption, Equation \ref{eq:rlrmodel} reduces to \ref{eq:lrmodel}.
 
 \begin{equation}
 \begin{aligned}
@@ -396,13 +413,15 @@ However, the brittleness of LRM with respect to grossly corrupted observations, 
 
 %From most of the TD such as the Tucker, CP and t-SVD decompositions, we can estimate $\mathten{L}$ and $\mathten{N}$, while from just a few decompositions, e.g., t-RPCA, to $\mathten{S}$. Although low-rank models are not limited to the use of specific decompositions, here we will only focus on the use of t-SVD and t-RPCA decompositions for solving Equations \ref{eq:lowrankmodel} and \ref{eq:lowrankmodel2} respectively. 
 
-Although there exist many related works that successfully solve these models [15, 34], the RLRM lacks optimality when the intrinsic structure of a tensor is of high-rank, a situation that often happen in practice, which leads to a global solution that is not exactly low-rank.  However, recent studies based on matrix LRM [] show that we can obtain better performance by exploiting the intrinsic low-rank structure which results after transforming a matrix $\mathmat{X}\in\mathbb{R}^{m \times n}$ into a new representation $\mathmat{Y}\in\mathbb{R}^{m \times n}$ either using linear or non-linear transformations. For second-order tensors (matrices), there exist some models that exploit the intrinsic low-rank structure of the transformed representation such as Structured Total Least Norm (STLN) [], and kernel PCA []. Furthermore, recently Li, C., et. al, [x], study a LRM-based Matrix Completion under Multiple linear Transformations (MCMT). Following these ideas, we propose a Tensor RLRM under Multilinear Transformation (TRLRMMT).
+Although there exist many related works that successfully solve these models [15, 34], both LRM and RLRM lack optimality when the intrinsic structure of a tensor is of high-rank, a situation that often happen in practice, which leads to a global solution that is not exactly low-rank.  However, recent studies based on matrix LRM [] show that we can obtain better performance by exploiting the intrinsic low-rank structure which arises after transforming a matrix $\mathmat{X}\in\mathbb{R}^{m \times n}$ into a new representation $\mathmat{Y}\in\mathbb{R}^{m \times n}$ either using linear or non-linear transformations. For second-order tensors (matrices), there exist some models that exploit the intrinsic low-rank structure of the transformed representation such as Structured Total Least Norm (STLN) [], and kernel PCA []. Furthermore, recently Li, C., et. al, [x], study a LRM-based Matrix Completion under Multiple linear Transformations (MCMT). Following these ideas, we propose the Tensor RLRM under Multilinear Transformation (TRLRM-MT).
 %which aims to exploit the induced multidimensional low-rank structures of the transformed space. 
 
-We formulate the TRLRMMT problem as finding a low-rank approximation of a tensor $\mathten{X}$ 
-under some multilinear transformation $\Phi$, i.e., $\Phi(\mathten{X})$, while considering the low-rank structures of the transformed tensor. Formally, we can model the TRLRMMT problem as Equation \ref{eq:horlrmmt} shows. 
+We formulate the TRLRM-MT problem as finding a low-rank approximation of a tensor $\mathten{X}$ 
+under some multilinear transformation $\Phi$, i.e., $\Phi(\mathten{X})$, while considering the low-rank structures of the transformed tensor. Formally, we can model the TRLRM-MT problem as Equation \ref{eq:horlrmmt} shows. 
 
-$*********$NOTA$*********$ Para el problema MCMT, considera la estructura de bajo rango de la transformacion porque lo mete en el problema de optimizacion dentro de la norma, aqui tambien lo hacemos? A mi parecer si, puesto que la restriccion se termina introduciendo en la funcion de lagrange aumentada (sin restricciones), mas no en las normas, cosa contraria a MCMT.
+\color{red}
+\textbf{NOTA}. Para el problema MCMT, considera la estructura de bajo rango de la transformacion porque lo mete en el problema de optimizacion dentro de la norma, aqui tambien lo hacemos? A mi parecer si, puesto que la restriccion se termina introduciendo en la funcion de lagrange aumentada (sin restricciones), mas no en las normas, cosa contraria a MCMT.
+\color{black}
 
 
 \begin{equation}
@@ -413,10 +432,11 @@ $*********$NOTA$*********$ Para el problema MCMT, considera la estructura de baj
 \label{eq:horlrmmt}
 \end{equation}
 
+\color{red}
+\textbf{NOTA}. ¿ESTO IRÍA EN RESULTADOS?
+\color{black}
 
-$*********$ESTO IRÍA EN RESULTADOS?$*********$.
-
-Here, we employ the TRLRMMT for modeling and approximation of features [], and system complexity reduction []. For that purpose, we will assume that the behavior of any vehicle geometric feature over time can be modeled by either polynomial or rational functions. Then, we employ the ideas of [5] combined with the HoRLRM$^2$T to model the VTF tensor $\mathten{T}^{(N)}$ as either polynomial or rational functions through the Hankelization or L{\"o}wnerization transformations respectively, while reducing the transformed space complexity using RLRM. Finally, we recover the original domain applying the inverse transformation previously employed.
+Here, we employ the TRLRM-MT for modeling and approximation of features, and system complexity reduction []. For that purpose, we will assume that the behavior of any vehicle geometric feature over time can be well-approximated by either polynomial or rational functions. Then, we combine the ideas of [5] with our TRLRM-MT to model the VTF tensor $\mathten{T}^{(N)}$ as either polynomial or rational functions through the Hankelization or L{\"o}wnerization multilinear transformations respectively, in order to form a new space, i.e., $\mathten{Z}=\Phi(\mathten{\mathten{T}^{(N)}})$, while reducing the space complexity after approximating the transformed tensor as $\mathten{Z} \approx \mathten{\hat{Z}}$ via RLRM. Finally, we recover the original domain after applying the inverse transformation $\mathten{\hat{T}}^{(N)}\Phi^{-1}(\mathten{\hat{Z}})$.
 
 
 %First, we will assume that the behavior of any vehicle geometric feature over time can be modeled by either polynomial or rational functions. Then, by mapping the VTF tensor $\mathten{T}^{(N)}$ as a structured Hankel or L{\"o}wner tensor, we approximate the transformed space as a low-rank tensor using the t-SVD. Finally, we recover $\mathten{T}^{(N)}$ applying the inverse transformation.
@@ -439,10 +459,10 @@ Here, we employ the TRLRMMT for modeling and approximation of features [], and s
 %We will also emphasize on reducing the system complexity
 
 
-
-$*********$NOTA$*********$. EMPLEAMOS LOS MODELOS SEGUIDOS DE UN TRUNCAMIENTO DE LA T-SVD, DESCARTANDO AQUELLOS VALORES SINGULARES MULTIDIMENSIONALES QUE NO APORTEN SUFICIENTE INFORMACION DE ACUERDO A SU DISTRIBUCION. ADICIONALMENTE EL USO DE T-RPCA PARA GENERAR MODELOS MAS ROBUSTOS FRENTE A CORRUPCION EN LOS DATOS.
+\color{red}
+\textbf{NOTA}. EMPLEAMOS LOS MODELOS SEGUIDOS DE UN TRUNCAMIENTO DE LA T-SVD, DESCARTANDO AQUELLOS VALORES SINGULARES MULTIDIMENSIONALES QUE NO APORTEN SUFICIENTE INFORMACION DE ACUERDO A SU DISTRIBUCION. ADICIONALMENTE EL USO DE T-RPCA PARA GENERAR MODELOS MAS ROBUSTOS FRENTE A CORRUPCION EN LOS DATOS.
 PRESENTAR CONTRIBUCIONES EN EL MODELADO DE DATOS EN EL USO DE ESTAS DOS TRANSFORMACIONES, ASI COMO CARACTERISTICAS DE LOS TENSORES RESULTANTES COMO LO SON SUS RANGOS, TRABAJOS RELACIONADOS CON CP Y TUCKER.
-
+\color{black}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -453,8 +473,16 @@ PRESENTAR CONTRIBUCIONES EN EL MODELADO DE DATOS EN EL USO DE ESTAS DOS TRANSFOR
 \section{Experiments}
 \subsection{Test Evaluation}
 
-\subsection{Modeling and Approximation of Features}
-Reduccion de la complejidad de sistemas
+\subsection{Modeling, Approximation and Complexity Reduction of the Geometric Feature Space}
+\color{red}
+\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
+	\item Modelado y approximación del espacio de caracteristicas geometricas.
+	\item Aplicacion a series temporales
+	\item Reduccion de la complejidad de sistemas.
+	\item Impacto de la reducción de la complejidad en tareas de clasificación (SVM, numero de vectores soporte, RF, NN, etc).
+	\item  Evaluación de la perdida de información en base a entropía.
+\end{enumerate}
+\color{black}
 
 
 %This section may be divided by subheadings. It should provide a concise and precise description of the experimental results, their interpretation as well as the experimental conclusions that can be drawn.
@@ -548,7 +576,7 @@ Reduccion de la complejidad de sistemas
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
-
+\color{red}
 Reconocimiento de patrones para ASDW, a partir de los cuales ...
 
 Conexion de tensores hankel con la complejidad de sistenas multidimensionales multicanal, la complejidad de la tarea de clasificacion o del input space se ve reducida.
@@ -556,7 +584,7 @@ Conexion de tensores hankel con la complejidad de sistenas multidimensionales mu
 Hankel aproxima funciones exponenciales del tipo $a^n$, las caracteristicas geometricas tienen este comportamiento y pueden ser aproximadas por tensores hankel, explotamos el bajo rango que presenta esta transformacion.
 
 Loewner aproxima funciones racionales, sin embargo existe una relacion entre hankel y loewner, de esta manera podemos emplearlo del mismo modo para modelar las caracteristicas geometricas empleando funciones racionales, en conjunto con t-RPCA, se logra una aproximacion mas robusta y exacta, pero no presenta bajo rango. Estudiar las propiedades de estos tensores.
-
+\color{black}
 %Authors should discuss the results and how they can be interpreted in perspective of previous studies and of the working hypotheses. The findings and their implications should be discussed in the broadest context possible. Future research directions may also be highlighted.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -570,17 +598,18 @@ Loewner aproxima funciones racionales, sin embargo existe una relacion entre han
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
-\textbf{CONCLUSIONES DEL LOW-RANK Y TRANSFORMACIONES}. CUANDO CONOCEMOS LA FORMA ALGEBRAICA DE LAS CARACTERISTICAS SE EMPLEA HANKEL+T-SVD, DE OTRO MODO LOEWNER + T-RPCA, EL USO DE ESTOS MODELOS DE BAJO RANGO NOS AYUDAN A ELIMINAR DISTURBIOS EN LOS DATOS, LO QUE SE TRADUCE EN UNA REDUCCION DE LA COMPLEJIDAD DE LOS DATOS, UNA MENOR COMPLEJIDAD EN LAS FUNCIONES DE CLASIFICACION (SIZE, OCCLUSION).
+\color{red}
+\textbf{CONCLUSIONES DEL LOW-RANK CON TRANSFORMACIONES}. La aplicación de una transformación multilineale apropiada (adecuada) a nuestros datos resulta ventajosa para explotar las propiedades que esta misma nos provee, por ejemplo, con Hankel y Loewner pudimos explotar las propiedades intrinsecas de bajo rango en modelos de descomposicón tensoriales. Los modelos de descomposicion robustos con Las estructuras Loewner resultan ser adecuadas cuando las propiedades en el espacio de funciones son desconocidas. Por otro lado, los modelos de descomposición LRM junto con estructuras Hankel resultan ser adecuadas cuando se conoce la geometria de las funciones a modelar. El uso de las aproximaciones de bajo rango bajo estos esquemas, permiten una reducción en la complejidad del espacio de caracteristicas, con lo cual, se pudo comprobar que las tareas de clasificacion muestran tambien una menor complejidad cuando el espacio de entrada es de baja complejidad.
 \\
 \\
 \textbf{TRABAJO FUTURO}: 
 \begin{enumerate}[leftmargin=*,labelsep=4.9mm]
-	\item 	Uso de otras transformaciones multilineales como lo es la \textit{Segmentation}, \textit{Stochastic}, etc.
-	\item 	Transformaciones no lineales (\textit{Kernel t-RPCA})
-	\item	Descomposiciones tensoriales con restricciones estructuradas (\textit{Hankel}, \textit{Loewner}, etc.): "\textit{Structured Tensor Decompositions}" a fin de explotar las propiedades de las estructuras de una manera mas eficientes (Articulo: \textit{Exploiting efficient representations in large-scale tensor decompositions}).
-	\item	Empleo de nuestro modelo tensorial para la deteccion de oclusiones (Nuestro Articulo).
+	\item 	Estudio de otras transformaciones multilineales como lo es \textit{Segmentation}, \textit{Stochastic}, etc.
+	\item 	Estudio de transformaciones no lineales (\textit{Kernel t-RPCA}).
+	\item	Descomposiciones tensoriales con restricciones estructuradas (\textit{Hankel}, \textit{Loewner}, etc.): "\textit{Structured Tensor Decompositions}" a fin de explotar las propiedades de las estructuras de una manera mas eficiente, asi mismo contemplandolas en el problema de minimización (Articulo: \textit{Exploiting efficient representations in large-scale tensor decompositions}).
+	\item	Empleo de nuestro modelo tensorial para la deteccion de anomalías en vehiculos con aplicacion para la detección de oclusiones (Nuestro Articulo).
 \end{enumerate}
-
+\color{black}
 
 %This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex.
 
